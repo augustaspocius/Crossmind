@@ -83,7 +83,7 @@
     <instance objName="obj_wall" x="416" y="128" name="inst_023A9908" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="128" name="inst_19E05431" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="448" y="160" name="inst_48670DFC" locked="0" code="targetRoom = rm_door_test;&#xA;target_x = 228;&#xA;target_y = 192;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controller" x="0" y="0" name="inst_364F2A68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cont_doors" x="0" y="0" name="inst_364F2A68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
