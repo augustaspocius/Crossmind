@@ -28,7 +28,53 @@
             <string>hsp = 0;
 vsp = 0;
 spd= 10;
-
+btimer = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hsp = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>vsp = 0;
 </string>
           </argument>
         </arguments>
@@ -51,25 +97,44 @@ spd= 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Shortcuts for keypresses
-
-/*
-right = keyboard_check(vk_right);
-left = keyboard_check(vk_left);
-up = keyboard_check(vk_up);
-down = keyboard_check(vk_down);
-*/
-
-left = keyboard_check(ord('A'));
-right = keyboard_check(ord('D'));
-up = keyboard_check(ord('W'));
-down = keyboard_check(ord('S'));
-
+            <string>MOVELEFT = keyboard_check(ord('A'));
+MOVERIGHT = keyboard_check(ord('D'));
+MOVEUP = keyboard_check(ord('W'));
+MOVEDOWN = keyboard_check(ord('S'));
+btimer--;
 //Move Player
-hsp = spd * (right - left);
-vsp = spd * (down - up);
-if(hsp &lt; 0){image_xscale = -1;}
-if(hsp &gt; 0){image_xscale = 1;}
+
+if(MOVERIGHT){image_xscale = 1;
+hsp += 0.35
+alarm[1] = 10;
+}
+if(MOVELEFT){image_xscale = -1;
+hsp -= 0.35
+alarm[1] = 10;}
+if(MOVEUP){
+vsp -= 0.35
+alarm[0] = 10;}
+if(MOVEDOWN){
+vsp += 0.35
+alarm[0] = 10;}
+
+if (vsp &gt; 8)
+{
+vsp = 8;
+}
+if (vsp &lt; -8)
+{
+vsp = -8;
+}
+if (hsp &gt; 8)
+{
+hsp = 8;
+}
+if (hsp &lt; -8)
+{
+hsp = -8;
+}
+
 //collision
 if(place_meeting(x + hsp, y, obj_wall)) {
     while(!place_meeting(x + sign(hsp), y, obj_wall)) {
@@ -110,15 +175,13 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_x = other.target_x;
-player_y = other.target_y;
-room_goto(other.targetRoom);
+            <string>room_goto(other.targetRoom);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="5" enumb="40">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -135,8 +198,171 @@ room_goto(other.targetRoom);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = player_x;
-y = player_y;
+            <string>
+//Shooting
+        if(btimer &lt; 0){
+        btimer = room_speed * 0.5;  
+        bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15;
+        bullet.direction = 270;
+        if(MOVEUP)
+        {
+        bullet.speed = 10;
+        }
+        if(MOVEDOWN)
+        {
+        bullet.speed = 20;
+        }
+        if(MOVELEFT)
+        {
+        bullet.direction = 225;
+        }
+        if(MOVERIGHT)
+        {
+        bullet.direction = 315;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale = 1;
+//Shooting
+        if(btimer &lt; 0){
+        
+        btimer = room_speed * 0.5;  
+        bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15;
+        bullet.direction = 0;
+        if(MOVEUP)
+        {
+        bullet.direction = 45;
+        }
+        if(MOVEDOWN)
+        {
+        bullet.direction = 315;
+        }
+        if(MOVELEFT)
+        {
+        bullet.speed = 10;
+        }
+        if(MOVERIGHT)
+        {
+        bullet.speed = 20;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Shooting
+if(btimer &lt; 0)
+{
+        btimer = room_speed * 0.5;  
+        bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15;
+        bullet.direction = 90;
+        if(MOVEUP)
+        {
+        bullet.speed = 20;
+        }
+        if(MOVEDOWN)
+        {
+        bullet.speed = 10;
+        }
+        if(MOVELEFT)
+        {
+        bullet.direction = 135;
+        }
+        if(MOVERIGHT)
+        {
+        bullet.direction = 45;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale = -1
+//Shooting
+if(btimer &lt; 0)
+{
+        
+        btimer = room_speed * 0.5; 
+        bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15;
+        bullet.direction = 180;
+        if(MOVEUP)
+        {
+        bullet.direction = 135;
+        }
+        if(MOVEDOWN)
+        {
+        bullet.direction = 225;
+        }
+        if(MOVELEFT)
+        {
+        bullet.speed = 20;
+        }
+        if(MOVERIGHT)
+        {
+        bullet.speed = 10;
+        }
+}
 </string>
           </argument>
         </arguments>
