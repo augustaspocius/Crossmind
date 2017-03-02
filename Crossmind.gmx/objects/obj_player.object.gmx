@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_player</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -19,7 +19,7 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>hsp = 0;
 vsp = 0;
-spd = 10;
+spd= 10;
 
 </string>
           </argument>
@@ -68,7 +68,8 @@ down = keyboard_check(ord('S'));
 //Move Player
 hsp = spd * (right - left);
 vsp = spd * (down - up);
-
+if(hsp &lt; 0){image_xscale = -1;}
+if(hsp &gt; 0){image_xscale = 1;}
 //collision
 if(place_meeting(x + hsp, y, obj_wall)) {
     while(!place_meeting(x + sign(hsp), y, obj_wall)) {
