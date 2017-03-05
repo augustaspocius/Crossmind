@@ -105,17 +105,17 @@ btimer--;
 //Move Player
 
 if(MOVERIGHT){image_xscale = 1;
-hsp += 0.35
+hsp += 0.55
 alarm[1] = 10;
 }
 if(MOVELEFT){image_xscale = -1;
-hsp -= 0.35
+hsp -= 0.55
 alarm[1] = 10;}
 if(MOVEUP){
-vsp -= 0.35
+vsp -= 0.55
 alarm[0] = 10;}
 if(MOVEDOWN){
-vsp += 0.35
+vsp += 0.55
 alarm[0] = 10;}
 
 if (vsp &gt; 8)
@@ -227,7 +227,6 @@ y += vsp;
         </arguments>
       </action>
     </event>
-
     <event eventtype="5" enumb="39">
       <action>
         <libid>1</libid>
