@@ -17,9 +17,33 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_door</sprite>
     </sprites>
+    <sprites name="UI sprites">
+      <sprite>sprites\Back</sprite>
+      <sprite>sprites\Continue</sprite>
+      <sprite>sprites\Coursor</sprite>
+      <sprite>sprites\Exit</sprite>
+      <sprite>sprites\New_Game</sprite>
+      <sprite>sprites\Option_title</sprite>
+      <sprite>sprites\Options</sprite>
+      <sprite>sprites\Player</sprite>
+      <sprite>sprites\player01</sprite>
+      <sprite>sprites\SP_Checkbox</sprite>
+      <sprite>sprites\Sp_Controls</sprite>
+      <sprite>sprites\Sp_ControlsTitle</sprite>
+      <sprite>sprites\SP_PauseContinue</sprite>
+      <sprite>sprites\SP_PauseExit</sprite>
+      <sprite>sprites\SP_PauseMainMenu</sprite>
+      <sprite>sprites\SP_PauseOptions</sprite>
+      <sprite>sprites\SP_Sounds</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\Bg_menu</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\mouse_hover_script.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
@@ -36,6 +60,22 @@
       <object>objects\cont_doors</object>
       <object>objects\cont_main</object>
     </objects>
+    <object>objects\OB_Controls</object>
+    <object>objects\OB_ControlsTitle</object>
+    <object>objects\OB_SoundsButton</object>
+    <object>objects\Obj_Back</object>
+    <object>objects\Obj_CheckboxSound</object>
+    <object>objects\OBJ_Continue</object>
+    <object>objects\Obj_Coursor</object>
+    <object>objects\Obj_Exit</object>
+    <object>objects\Obj_NewGame</object>
+    <object>objects\Obj_PauseMenuController</object>
+    <object>objects\OBJ_RoomController</object>
+    <object>objects\Object_Options</object>
+    <object>objects\OptionsTitle_Obj</object>
+    <object>objects\Player_object</object>
+    <object>objects\Player_ObjMenu</object>
+    <object>objects\player01_ObjMenu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_collision_test</room>
@@ -43,6 +83,10 @@
       <room>rooms\rm_door_test</room>
     </rooms>
     <room>rooms\rm_main</room>
+    <room>rooms\Controls_Room</room>
+    <room>rooms\GameRoom</room>
+    <room>rooms\Main_Menu</room>
+    <room>rooms\Options_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
