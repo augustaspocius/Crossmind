@@ -227,7 +227,6 @@ y += vsp;
         </arguments>
       </action>
     </event>
-
     <event eventtype="5" enumb="39">
       <action>
         <libid>1</libid>
