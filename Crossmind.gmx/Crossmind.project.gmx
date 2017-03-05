@@ -60,33 +60,37 @@
       <object>objects\cont_doors</object>
       <object>objects\cont_main</object>
     </objects>
-    <object>objects\OB_Controls</object>
-    <object>objects\OB_ControlsTitle</object>
-    <object>objects\OB_SoundsButton</object>
-    <object>objects\Obj_Back</object>
-    <object>objects\Obj_CheckboxSound</object>
-    <object>objects\OBJ_Continue</object>
-    <object>objects\Obj_Coursor</object>
-    <object>objects\Obj_Exit</object>
-    <object>objects\Obj_NewGame</object>
-    <object>objects\Obj_PauseMenuController</object>
-    <object>objects\OBJ_RoomController</object>
-    <object>objects\Object_Options</object>
-    <object>objects\OptionsTitle_Obj</object>
-    <object>objects\Player_object</object>
-    <object>objects\Player_ObjMenu</object>
-    <object>objects\player01_ObjMenu</object>
+    <objects name="Menu">
+      <object>objects\OB_SoundsButton</object>
+      <object>objects\Obj_Back</object>
+      <object>objects\Obj_CheckboxSound</object>
+      <object>objects\OBJ_Continue</object>
+      <object>objects\Obj_Coursor</object>
+      <object>objects\Obj_NewGame</object>
+      <object>objects\Obj_PauseMenuController</object>
+      <object>objects\Obj_Exit</object>
+      <object>objects\Object_Options</object>
+      <object>objects\OptionsTitle_Obj</object>
+      <object>objects\Player_object</object>
+      <object>objects\Player_ObjMenu</object>
+      <object>objects\player01_ObjMenu</object>
+      <object>objects\OBJ_RoomController</object>
+      <object>objects\OB_Controls</object>
+      <object>objects\OB_ControlsTitle</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_collision_test</room>
     <rooms name="Test">
+      <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
     </rooms>
     <room>rooms\rm_main</room>
-    <room>rooms\Controls_Room</room>
-    <room>rooms\GameRoom</room>
-    <room>rooms\Main_Menu</room>
-    <room>rooms\Options_room</room>
+    <rooms name="Menu">
+      <room>rooms\Options_room</room>
+      <room>rooms\Main_Menu</room>
+      <room>rooms\GameRoom</room>
+      <room>rooms\Controls_Room</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
