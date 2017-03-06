@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_BgMusic</sound>
+    <sound>sound\snd_save</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
       <sprite>sprites\spr_player</sprite>
@@ -35,10 +38,18 @@
       <sprite>sprites\SP_PauseMainMenu</sprite>
       <sprite>sprites\SP_PauseOptions</sprite>
       <sprite>sprites\SP_Sounds</sprite>
+      <sprite>sprites\sp_Save</sprite>
+      <sprites name="DeathScreen">
+        <sprite>sprites\sp_deathTitle</sprite>
+        <sprite>sprites\sp_Score</sprite>
+        <sprite>sprites\sp_goToDeathScreen</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
+    <background>background\Bg_PauseMEnuBG</background>
+    <background>background\bg_Deathscreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -61,36 +72,52 @@
       <object>objects\cont_main</object>
     </objects>
     <objects name="Menu">
-      <object>objects\OB_SoundsButton</object>
-      <object>objects\Obj_Back</object>
-      <object>objects\Obj_CheckboxSound</object>
-      <object>objects\OBJ_Continue</object>
-      <object>objects\Obj_Coursor</object>
-      <object>objects\Obj_NewGame</object>
-      <object>objects\Obj_PauseMenuController</object>
-      <object>objects\Obj_Exit</object>
-      <object>objects\Object_Options</object>
-      <object>objects\OptionsTitle_Obj</object>
-      <object>objects\Player_object</object>
-      <object>objects\Player_ObjMenu</object>
-      <object>objects\player01_ObjMenu</object>
       <object>objects\OBJ_RoomController</object>
-      <object>objects\OB_Controls</object>
-      <object>objects\OB_ControlsTitle</object>
+      <object>objects\Obj_PauseMenuController</object>
+      <object>objects\OB_SoundsButton</object>
+      <object>objects\player01_ObjMenu</object>
+      <object>objects\Player_ObjMenu</object>
+      <object>objects\obj_Coursor</object>
+      <objects name="titles">
+        <object>objects\obj_OptionsTitle</object>
+        <object>objects\obj_ControlsTitle</object>
+      </objects>
+      <objects name="buttons">
+        <object>objects\obj_CheckboxSound</object>
+        <object>objects\obj_Continue</object>
+        <object>objects\obj_NewGame</object>
+        <object>objects\obj_Exit</object>
+        <object>objects\obj_BackMainMenu</object>
+        <object>objects\obj_OptionsButton</object>
+        <object>objects\obj_BackOptions</object>
+        <object>objects\obj_Controls</object>
+        <objects name="PauseMenuButtons">
+          <object>objects\obj_ContinuePuaseMenu</object>
+          <object>objects\obj_MainMenuPauseMenu</object>
+          <object>objects\obj_OptionsPauseMenu</object>
+          <object>objects\obj_ExitPauseMenu</object>
+        </objects>
+        <object>objects\obj_SaveButton</object>
+      </objects>
+    </objects>
+    <objects name="DeathScreen">
+      <object>objects\obj_deathTitle</object>
+      <object>objects\obj_Score</object>
+      <object>objects\obj_goToDeathScreen</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\theFirstRoom</room>
+    <room>rooms\Main_Menu</room>
+    <room>rooms\rm_collision_test</room>
     <rooms name="Test">
       <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
     </rooms>
     <room>rooms\rm_main</room>
-    <rooms name="Menu">
-      <room>rooms\Options_room</room>
-      <room>rooms\Main_Menu</room>
-      <room>rooms\GameRoom</room>
-      <room>rooms\Controls_Room</room>
-    </rooms>
+    <room>rooms\Controls_Room</room>
+    <room>rooms\Options_room</room>
+    <room>rooms\DeathRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

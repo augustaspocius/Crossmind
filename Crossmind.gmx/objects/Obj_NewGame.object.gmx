@@ -90,7 +90,7 @@
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>GameRoom</room>
+            <room>rm_collision_test</room>
           </argument>
         </arguments>
       </action>
