@@ -10,8 +10,9 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
-      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_idle</sprite>
       <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_player_walking</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
