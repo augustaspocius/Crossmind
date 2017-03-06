@@ -111,6 +111,7 @@
     <room>rooms\Main_Menu</room>
     <room>rooms\rm_collision_test</room>
     <rooms name="Test">
+      <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
     </rooms>
     <room>rooms\rm_main</room>
