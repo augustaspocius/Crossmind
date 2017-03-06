@@ -107,17 +107,18 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\theFirstRoom</room>
-    <room>rooms\Main_Menu</room>
-    <room>rooms\rm_collision_test</room>
+    <rooms name="Menu">
+      <room>rooms\theFirstRoom</room>
+      <room>rooms\Main_Menu</room>
+      <room>rooms\Controls_Room</room>
+      <room>rooms\Options_room</room>
+      <room>rooms\DeathRoom</room>
+    </rooms>
     <rooms name="Test">
       <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
     </rooms>
     <room>rooms\rm_main</room>
-    <room>rooms\Controls_Room</room>
-    <room>rooms\Options_room</room>
-    <room>rooms\DeathRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
