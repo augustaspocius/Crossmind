@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,16 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>screen_save("GameScreen.png");
+            <string>global.escape = false;
+global.mainMenu = false;
+global.destroyInstance = true;
+screen_save("GameScreen.png");
+
 
 instance_deactivate_all(true);
+instance_activate_object(obj_Coursor);
 
 
+background_replace(Bg_PauseMEnuBG, "GameScreen.png", false, false);
 
-background = sprite_add("GameScreen.png",0, false, true, 640, 360);
-
-interest = "continue";
-instance_activate_object(Obj_Coursor);
 </string>
           </argument>
         </arguments>
@@ -62,6 +64,61 @@ instance_activate_object(Obj_Coursor);
     file_delete("GameScreen.png");
 }
 instance_activate_all();
+instance_deactivate_object(obj_Coursor);
+instance_deactivate_object(obj_ContinuePuaseMenu);
+instance_deactivate_object(obj_MainMenuPauseMenu);
+instance_deactivate_object(obj_OptionsPauseMenu);
+instance_deactivate_object(obj_ExitPauseMenu);
+instance_deactivate_object(obj_SaveButton);
+background_replace(Bg_PauseMEnuBG, "EmptyBackground.png", false, false);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.escape == true){
+global.escape = false;
+instance_destroy();
+}
+
+else if(global.mainMenu == true){
+    global.mainMenu=false;
+    instance_deactivate_object(OBJ_RoomController);
+    instance_destroy();
+    room_goto(Main_Menu);
+}
+
+else if(global.pauseMenuOptions){
+    
+    global.pauseMenuOptions=false;
+    instance_deactivate_object(OBJ_RoomController);
+    instance_destroy();
+    global.fromPause = true;
+    room_goto(Options_room);
+}
+else if(global.exitgame){
+
+    game_end();
+}
 </string>
           </argument>
         </arguments>
@@ -84,9 +141,13 @@ instance_activate_all();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(file_exists("GameScreen.png"))
+            <string>
+if(file_exists("GameScreen.png"))
 {
     file_delete("GameScreen.png");
+}
+if(file_exists("SavedGame")){
+file_delete("SavedGame");
 }
 </string>
           </argument>
@@ -110,110 +171,17 @@ instance_activate_all();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(background,0, 640, 360);
+            <string>//draw_sprite(background,0, 640, 360);
+//draw_background(bck, 0, 0);
+instance_deactivate_all(true);
+instance_activate_object(obj_Coursor);
+instance_activate_object(obj_ContinuePuaseMenu);
+instance_activate_object(obj_MainMenuPauseMenu);
+instance_activate_object(obj_OptionsPauseMenu);
+instance_activate_object(obj_ExitPauseMenu);
+instance_activate_object(obj_SaveButton);
 
-instance_activate_object(Obj_Coursor);
 
-if(interest == "continue"){
-draw_sprite(SP_PauseContinue, 1, room_width/2, 40+50);
-draw_sprite(SP_PauseMainMenu, 0, room_width/2, 140+50);
-draw_sprite(SP_PauseOptions, 0, room_width/2, 240+50);
-draw_sprite(SP_PauseExit, 0, room_width/2, 340+50);
-}
-else if(interest == "main menu"){
-draw_sprite(SP_PauseContinue, 0, room_width/2, 40+50);
-draw_sprite(SP_PauseMainMenu, 1, room_width/2, 140+50);
-draw_sprite(SP_PauseOptions, 0, room_width/2, 240+50);
-draw_sprite(SP_PauseExit, 0, room_width/2, 340+50);
-}
-else if(interest == "options"){
-draw_sprite(SP_PauseContinue, 0, room_width/2, 40+50);
-draw_sprite(SP_PauseMainMenu, 0, room_width/2, 140+50);
-draw_sprite(SP_PauseOptions, 1, room_width/2, 240+50);
-draw_sprite(SP_PauseExit, 0, room_width/2, 340+50);
-}
-else if(interest == "exit"){
-draw_sprite(SP_PauseContinue, 0, room_width/2, 40+50);
-draw_sprite(SP_PauseMainMenu, 0, room_width/2, 140+50);
-draw_sprite(SP_PauseOptions, 0, room_width/2, 240+50);
-draw_sprite(SP_PauseExit, 1, room_width/2, 340+50);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="40">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(interest == "continue")
-{
-    interest = "main menu";
-}
-else if (interest == "main menu")
-{
-    interest = "options";
-}
-else if (interest == "options")
-{
-    interest = "exit";
-}
-else if (interest == "exit")
-{
-    interest = "continue";
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="38">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(interest == "continue")
-{
-    interest = "exit";
-}
-else if (interest == "main menu")
-{
-    interest = "continue";
-}
-else if (interest == "options")
-{
-    interest = "main menu";
-}
-else if (interest == "exit")
-{
-    interest = "options";
-}
 </string>
           </argument>
         </arguments>
@@ -236,40 +204,8 @@ else if (interest == "exit")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="13">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(interest == "continue"){
+            <string>if(global.destroyInstance){
     instance_destroy();
-}
-else if (interest == "main menu"){
-  room_goto(Main_Menu);
-}
-else if (interest == "options"){
-
-}
-else if (interest == "exit"){
-    game_end();
 }
 </string>
           </argument>
