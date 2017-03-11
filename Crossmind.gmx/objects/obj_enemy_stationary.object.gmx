@@ -67,7 +67,7 @@ bullet3.direction = 180;
 bullet4.direction = 270;
 shooting = 64;
 }
-mp_potential_step(obj_player.x, obj_player.y,2,true);
+
 
 </string>
           </argument>
