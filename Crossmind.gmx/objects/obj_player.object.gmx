@@ -395,7 +395,7 @@ if(btimer &lt; 0)
         bullet.direction = 180;
         if(MOVEUP)
         {
-        bullet.direction = 135;
+        bullet.direction = 200;
         }
         if(MOVEDOWN)
         {
