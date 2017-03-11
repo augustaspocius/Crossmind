@@ -26,6 +26,7 @@
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_key</sprite>
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_lock</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -52,6 +53,7 @@
         <sprite>sprites\sp_goToDeathScreen</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\transparent</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
@@ -79,6 +81,8 @@
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
       <object>objects\obj_key</object>
+      <object>objects\obj_lock</object>
+      <object>objects\obj_door_lock</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>

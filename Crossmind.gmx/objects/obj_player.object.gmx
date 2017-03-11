@@ -31,8 +31,9 @@ spd= 10;
 btimer = 0;
 image_speed = 0.25;
 lives = 5;
-score = 20 * room_speed;
-
+score = 2000 * room_speed;
+invincability = 64;
+key_on = c_white;
 </string>
           </argument>
         </arguments>
@@ -106,6 +107,7 @@ MOVERIGHT = keyboard_check(ord('D'));
 MOVEUP = keyboard_check(ord('W'));
 MOVEDOWN = keyboard_check(ord('S'));
 btimer--;
+invincability--;
 score--;
 if(score &lt;= 0)
 {
@@ -158,8 +160,43 @@ hsp = -8;
 //Push
 scr_push();
 //Move the object
+//scr_enemy_collisions();
 scr_move(hsp ,vsp);
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_lock">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(other.col == key_on){
+    var key_col = key_on;
+    with(obj_lock){
+    if(key_col == col)
+    instance_destroy();
+    }
+    with(obj_key){
+    if(key_col == col)
+    instance_destroy();
+    }
+    key_on=c_white;
+}
 </string>
           </argument>
         </arguments>
