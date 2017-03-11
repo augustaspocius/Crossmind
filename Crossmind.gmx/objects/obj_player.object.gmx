@@ -515,3 +515,4 @@ if(btimer &lt; 0)
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>
 </object>
+
