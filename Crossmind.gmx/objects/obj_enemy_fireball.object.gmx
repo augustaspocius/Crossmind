@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lifeTime = 2 * room_speed;
+            <string>lifeTime = 20 * room_speed;
 
 </string>
           </argument>

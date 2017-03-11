@@ -51,8 +51,7 @@ shooting = 64;
           <argument>
             <kind>1</kind>
             <string>shooting --;
-if(shooting &lt;= 0)
-{
+if(shooting &lt;= 0){
 bullet1 = instance_create(x,y,obj_enemy_fireball);
 bullet2 = instance_create(x,y,obj_enemy_fireball);
 bullet3 = instance_create(x,y,obj_enemy_fireball);

@@ -26,6 +26,7 @@
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_key</sprite>
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_lock</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -79,7 +80,8 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
-      <object>objects\obj_key</object>
+      <object>objects\obj_key</obje
+      <object>objects\obj_lock</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
