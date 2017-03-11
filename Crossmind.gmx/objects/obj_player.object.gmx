@@ -111,8 +111,7 @@ if(score &lt;= 0)
 {
 if(room != DeathRoom)
 {
-instance_destroy();
-room_goto(DeathRoom);
+game_restart();
 }
 }
 //Move Player
@@ -155,36 +154,11 @@ if (hsp &lt; -8)
 hsp = -8;
 }
 
-//collision
-if(place_meeting(x + hsp, y, obj_wall)) {
-    while(!place_meeting(x + sign(hsp), y, obj_wall)) {
-        x+= sign(hsp);
-        }
-        hsp = 0;
-}
 
-if(place_meeting(x, y + vsp, obj_wall)) {
-    while(!place_meeting(x, y + sign(vsp), obj_wall)) {
-        y+= sign(vsp);
-        }
-        vsp = 0;
-}
-//collision enemy
-if(place_meeting(x + hsp, y, obj_enemy)) {
-    while(!place_meeting(x + sign(hsp), y, obj_enemy)) {
-        x+= sign(hsp);
-        }
-        hsp = 0;
-}
-
-if(place_meeting(x, y + vsp, obj_enemy)) {
-    while(!place_meeting(x, y + sign(vsp), obj_enemy)) {
-        y+= sign(vsp);
-        }
-        vsp = 0;
-}
-x += hsp;
-y += vsp;
+//Push
+scr_push();
+//Move the object
+scr_move(hsp ,vsp);
 
 </string>
           </argument>
@@ -211,8 +185,7 @@ y += vsp;
             <string>lives --;
 if(lives &lt;= 0)
 {
-instance_destroy();
-room_goto(DeathRoom);
+game_restart();
 }
 </string>
           </argument>
@@ -231,28 +204,6 @@ room_goto(DeathRoom);
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_enemy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="5" enumb="40">
@@ -528,3 +479,4 @@ if(btimer &lt; 0)
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>
 </object>
+
