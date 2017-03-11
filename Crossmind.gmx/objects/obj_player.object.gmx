@@ -111,7 +111,6 @@ if(score &lt;= 0)
 {
 if(room != DeathRoom)
 {
-script_execute(mouse_hover_script);
 room_goto(DeathRoom);
 }
 
