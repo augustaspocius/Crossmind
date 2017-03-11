@@ -30,12 +30,12 @@ global.mainMenu = false;
 global.destroyInstance = true;
 screen_save("GameScreen.png");
 
-
+background_visible[0] = true;
 instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 
 
-background_replace(Bg_PauseMEnuBG, "GameScreen.png", false, false);
+background_replace(Bg_PauseMEnuBG, "RoomBackground.png", false, false);
 
 </string>
           </argument>
@@ -187,7 +187,7 @@ instance_activate_object(obj_SaveButton);
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="80">
+    <event eventtype="10" enumb="27">
       <action>
         <libid>1</libid>
         <id>603</id>
