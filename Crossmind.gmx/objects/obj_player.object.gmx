@@ -31,7 +31,7 @@ spd= 10;
 btimer = 0;
 image_speed = 0.25;
 lives = 5;
-score = 6 * room_speed;
+score = 20 * room_speed;
 
 </string>
           </argument>
@@ -113,7 +113,6 @@ if(room != DeathRoom)
 {
 game_restart();
 }
-
 }
 //Move Player
 if(hsp == 0 &amp;&amp; vsp == 0)
@@ -263,11 +262,11 @@ game_restart();
         }
         if(MOVELEFT)
         {
-        bullet.direction = 225;
+        bullet.direction = 290;
         }
         if(MOVERIGHT)
         {
-        bullet.direction = 315;
+        bullet.direction = 250;
         }
 }
 </string>
@@ -302,11 +301,11 @@ game_restart();
         bullet.direction = 0;
         if(MOVEUP)
         {
-        bullet.direction = 45;
+        bullet.direction = 340;
         }
         if(MOVEDOWN)
         {
-        bullet.direction = 315;
+        bullet.direction = 20;
         }
         if(MOVELEFT)
         {
@@ -356,11 +355,11 @@ if(btimer &lt; 0)
         }
         if(MOVELEFT)
         {
-        bullet.direction = 135;
+        bullet.direction = 70;
         }
         if(MOVERIGHT)
         {
-        bullet.direction = 45;
+        bullet.direction = 110;
         }
 }
 </string>
@@ -400,7 +399,7 @@ if(btimer &lt; 0)
         }
         if(MOVEDOWN)
         {
-        bullet.direction = 225;
+        bullet.direction = 160;
         }
         if(MOVELEFT)
         {
