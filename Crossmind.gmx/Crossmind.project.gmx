@@ -67,6 +67,7 @@
     </objects>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
     </objects>
     <objects name="Room_objects">
