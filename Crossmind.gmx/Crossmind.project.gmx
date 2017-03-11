@@ -16,11 +16,12 @@
       <sprite>sprites\spr_player_walking_up</sprite>
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
-      <sprite>sprites\sprite_stationary</sprite>
+      <sprite>sprites\sprite_stationaryPlayer</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
       <sprite>sprites\spr_enemy_fireball</sprite>
+      <sprite>sprites\spr_purple_boss</sprite>
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
@@ -30,7 +31,6 @@
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
-      <sprite>sprites\Continue</sprite>
       <sprite>sprites\Coursor</sprite>
       <sprite>sprites\Exit</sprite>
       <sprite>sprites\New_Game</sprite>
@@ -50,6 +50,7 @@
         <sprite>sprites\sp_Score</sprite>
         <sprite>sprites\sp_goToDeathScreen</sprite>
       </sprites>
+      <sprite>sprites\Continue</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
