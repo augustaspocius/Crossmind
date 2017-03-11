@@ -111,7 +111,8 @@ if(score &lt;= 0)
 {
 if(room != DeathRoom)
 {
-game_restart();
+instance_destroy();
+room_goto(DeathRoom);
 }
 }
 //Move Player
@@ -210,7 +211,8 @@ y += vsp;
             <string>lives --;
 if(lives &lt;= 0)
 {
-game_restart();
+instance_destroy();
+room_goto(DeathRoom);
 }
 </string>
           </argument>
