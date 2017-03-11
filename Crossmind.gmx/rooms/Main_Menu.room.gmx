@@ -67,7 +67,6 @@ instance_deactivate_object(obj_player);</code>
     <instance objName="obj_NewGame" x="480" y="288" name="inst_0E0BABB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Exit" x="480" y="480" name="inst_6A780B0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_OptionsButton" x="480" y="384" name="inst_29EFCB4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="spr_stationary" x="32" y="192" name="inst_F463408B" locked="0" code="" scaleX="1.79999995231628" scaleY="1.79999995231628" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
