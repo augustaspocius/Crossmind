@@ -31,7 +31,10 @@ spd= 10;
 btimer = 0;
 image_speed = 0.25;
 lives = 5;
-score = 20 * room_speed;
+steps = 0;
+score = 120;
+steps = 0;
+invincability = 0;
 
 </string>
           </argument>
@@ -106,13 +109,23 @@ MOVERIGHT = keyboard_check(ord('D'));
 MOVEUP = keyboard_check(ord('W'));
 MOVEDOWN = keyboard_check(ord('S'));
 btimer--;
-score--;
+steps += 1;
+if steps &gt;= room_speed
+{
+steps = 0;
+score -=1;
+}
+invincability--;
 if(score &lt;= 0)
 {
 if(room != DeathRoom)
 {
 game_restart();
 }
+}
+if(lives &lt;= 0)
+{
+game_restart();
 }
 //Move Player
 if(hsp == 0 &amp;&amp; vsp == 0)
@@ -182,10 +195,10 @@ scr_move(hsp ,vsp);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lives --;
-if(lives &lt;= 0)
+            <string>if (invincability &lt;=0)
 {
-game_restart();
+lives --;
+invincability = 64;
 }
 </string>
           </argument>
@@ -204,6 +217,29 @@ game_restart();
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="5" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_restart();
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="5" enumb="40">
@@ -479,3 +515,4 @@ if(btimer &lt; 0)
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>
 </object>
+
