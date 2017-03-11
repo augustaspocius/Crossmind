@@ -118,7 +118,7 @@ sprite_index = spr_player_walking;
 hsp -= 0.55
 alarm[1] = 10;}
 if(MOVEUP){
-sprite_index = spr_player_walking;
+sprite_index = spr_player_walking_up;
 vsp -= 0.55
 alarm[0] = 10;}
 if(MOVEDOWN){
