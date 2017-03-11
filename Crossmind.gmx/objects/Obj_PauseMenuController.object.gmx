@@ -35,7 +35,7 @@ instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 
 
-background_replace(Bg_PauseMEnuBG, "GameScreen.png", false, false);
+background_replace(Bg_PauseMEnuBG, "GameBackground.png", false, false);
 
 </string>
           </argument>
@@ -173,6 +173,7 @@ file_delete("SavedGame");
             <kind>1</kind>
             <string>//draw_sprite(background,0, 640, 360);
 //draw_background(bck, 0, 0);
+background_visible[0] = true;
 instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 instance_activate_object(obj_ContinuePuaseMenu);
@@ -187,7 +188,7 @@ instance_activate_object(obj_SaveButton);
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="80">
+    <event eventtype="10" enumb="27">
       <action>
         <libid>1</libid>
         <id>603</id>
