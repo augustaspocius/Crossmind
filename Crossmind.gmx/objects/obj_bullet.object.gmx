@@ -53,7 +53,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.ScoreCount += 100;
+            <string>score += 5 * room_speed;
 </string>
           </argument>
         </arguments>

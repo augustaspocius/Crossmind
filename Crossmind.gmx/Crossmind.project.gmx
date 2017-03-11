@@ -13,9 +13,13 @@
       <sprite>sprites\spr_player_idle</sprite>
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_player_walking</sprite>
+      <sprite>sprites\spr_player_walking_up</sprite>
+      <sprite>sprites\spr_player_lives</sprite>
+      <sprite>sprites\spr_player_walking_down</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_enemy_fireball</sprite>
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
@@ -63,6 +67,8 @@
     </objects>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_stationary</object>
+      <object>objects\obj_enemy_fireball</object>
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_wall</object>
@@ -93,19 +99,18 @@
         <object>objects\obj_BackOptions</object>
         <object>objects\obj_Controls</object>
         <objects name="PauseMenuButtons">
-          <object>objects\obj_SaveButton</object>
           <object>objects\obj_ContinuePuaseMenu</object>
           <object>objects\obj_MainMenuPauseMenu</object>
           <object>objects\obj_OptionsPauseMenu</object>
           <object>objects\obj_ExitPauseMenu</object>
         </objects>
+        <object>objects\obj_SaveButton</object>
       </objects>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
       <object>objects\obj_Score</object>
       <object>objects\obj_goToDeathScreen</object>
-      <object>objects\obj_deathScreenController</object>
     </objects>
   </objects>
   <rooms name="rooms">
