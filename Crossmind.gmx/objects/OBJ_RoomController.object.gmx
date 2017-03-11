@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="9" enumb="80">
+    <event eventtype="10" enumb="27">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>game_save("SavedGame");
+screen_save("RoomBackground.png");
 instance_create(x, y, Obj_PauseMenuController);
 instance_create(0,0, obj_Coursor);
 instance_activate_object(obj_ContinuePuaseMenu);
