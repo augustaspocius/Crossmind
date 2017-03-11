@@ -14,14 +14,18 @@
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_player_walking</sprite>
       <sprite>sprites\spr_player_walking_up</sprite>
+      <sprite>sprites\spr_player_lives</sprite>
+      <sprite>sprites\spr_player_walking_down</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_enemy_fireball</sprite>
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_door</sprite>
-      <sprite>sprites\spr_obstacle</sprite>
+      <sprite>sprites\spr_key</sprite>
+      <sprite>sprites\spr_block</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -48,9 +52,6 @@
         <sprite>sprites\sp_goToDeathScreen</sprite>
       </sprites>
     </sprites>
-    <sprites name="Items">
-      <sprite>sprites\spr_key</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
@@ -64,20 +65,20 @@
     <script>scripts\scr_push.gml</script>
   </scripts>
   <objects name="objects">
-    <objects name="Items">
-      <object>objects\obj_key</object>
-    </objects>
     <objects name="Characters">
       <object>objects\obj_player</object>
       <object>objects\obj_bullet</object>
     </objects>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_stationary</object>
+      <object>objects\obj_enemy_fireball</object>
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_wall</object>
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
+      <object>objects\obj_key</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -128,12 +129,12 @@
     </rooms>
     <rooms name="Test">
       <room>rooms\rm_collision_test</room>
-      <room>rooms\rm_start</room>
       <room>rooms\rm_door_test</room>
-      <room>rooms\rm_right</room>
-      <room>rooms\rm_up</room>
       <room>rooms\rm_down</room>
       <room>rooms\rm_left</room>
+      <room>rooms\rm_right</room>
+      <room>rooms\rm_start</room>
+      <room>rooms\rm_up</room>
     </rooms>
     <room>rooms\rm_main</room>
   </rooms>
