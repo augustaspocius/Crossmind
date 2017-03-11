@@ -30,12 +30,12 @@ global.mainMenu = false;
 global.destroyInstance = true;
 screen_save("GameScreen.png");
 
-
+background_visible[0] = true;
 instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 
 
-background_replace(Bg_PauseMEnuBG, "GameBackground.png", false, false);
+background_replace(Bg_PauseMEnuBG, "RoomBackground.png", false, false);
 
 </string>
           </argument>
@@ -173,7 +173,6 @@ file_delete("SavedGame");
             <kind>1</kind>
             <string>//draw_sprite(background,0, 640, 360);
 //draw_background(bck, 0, 0);
-background_visible[0] = true;
 instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 instance_activate_object(obj_ContinuePuaseMenu);

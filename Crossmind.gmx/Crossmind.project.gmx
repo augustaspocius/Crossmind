@@ -16,6 +16,7 @@
       <sprite>sprites\spr_player_walking_up</sprite>
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
+      <sprite>sprites\sprite_stationary</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
@@ -35,8 +36,6 @@
       <sprite>sprites\New_Game</sprite>
       <sprite>sprites\Option_title</sprite>
       <sprite>sprites\Options</sprite>
-      <sprite>sprites\Player</sprite>
-      <sprite>sprites\player01</sprite>
       <sprite>sprites\SP_Checkbox</sprite>
       <sprite>sprites\Sp_Controls</sprite>
       <sprite>sprites\Sp_ControlsTitle</sprite>
@@ -68,6 +67,7 @@
     <objects name="Characters">
       <object>objects\obj_player</object>
       <object>objects\obj_bullet</object>
+      <object>objects\spr_stationary</object>
     </objects>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>

@@ -11,19 +11,17 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>instance_deactivate_object(obj_Coursor);
-instance_create(room_width/2, room_height/2/3, obj_ContinuePuaseMenu);
-instance_create(room_width/2, room_height/3, obj_MainMenuPauseMenu)
+instance_create(0,0, OBJ_RoomController);
+instance_create(room_width/2, room_height/6, obj_ContinuePuaseMenu);
+instance_create(room_width/2, room_height/3, obj_MainMenuPauseMenu);
 instance_create(room_width/2, room_height/2, obj_OptionsPauseMenu);
 instance_create(room_width/2, room_height - room_height/3, obj_SaveButton);
-instance_create(room_width/2, room_height - room_height/2/3, obj_ExitPauseMenu);
+instance_create(room_width/2, room_height - room_height/6, obj_ExitPauseMenu);
 instance_deactivate_object(obj_ContinuePuaseMenu);
 instance_deactivate_object(obj_MainMenuPauseMenu);
 instance_deactivate_object(obj_OptionsPauseMenu);
 instance_deactivate_object(obj_SaveButton);
-instance_deactivate_object(obj_ExitPauseMenu);
-instance_create(0,0, OBJ_RoomController);
-instance_create(0,0, OBJ_RoomController);
-instance_create(0,0, OBJ_RoomController);</code>
+instance_deactivate_object(obj_ExitPauseMenu);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -44,7 +42,7 @@ instance_create(0,0, OBJ_RoomController);</code>
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="0" foreground="0" name="Bg_PauseMEnuBG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="Bg_PauseMEnuBG" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
