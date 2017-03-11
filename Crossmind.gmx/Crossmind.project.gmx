@@ -24,6 +24,8 @@
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_door</sprite>
+      <sprite>sprites\spr_key</sprite>
+      <sprite>sprites\spr_block</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -59,6 +61,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\mouse_hover_script.gml</script>
+    <script>scripts\scr_move.gml</script>
+    <script>scripts\scr_push.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Characters">
@@ -73,6 +77,8 @@
     <objects name="Room_objects">
       <object>objects\obj_wall</object>
       <object>objects\obj_door</object>
+      <object>objects\obj_block</object>
+      <object>objects\obj_key</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -124,6 +130,11 @@
     <rooms name="Test">
       <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
+      <room>rooms\rm_down</room>
+      <room>rooms\rm_left</room>
+      <room>rooms\rm_right</room>
+      <room>rooms\rm_start</room>
+      <room>rooms\rm_up</room>
     </rooms>
     <room>rooms\rm_main</room>
   </rooms>
@@ -136,3 +147,4 @@
     <TutorialPage>0</TutorialPage>
   </TutorialState>
 </assets>
+
