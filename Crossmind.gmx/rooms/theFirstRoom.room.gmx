@@ -13,7 +13,8 @@
   <code>global.gameSaved = false;
 room_goto(Main_Menu);
 window_set_cursor(cr_none);
-global.dead = false;</code>
+global.dead = false;
+global.ScoreCount = 0;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

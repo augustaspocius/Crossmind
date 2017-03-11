@@ -93,18 +93,19 @@
         <object>objects\obj_BackOptions</object>
         <object>objects\obj_Controls</object>
         <objects name="PauseMenuButtons">
+          <object>objects\obj_SaveButton</object>
           <object>objects\obj_ContinuePuaseMenu</object>
           <object>objects\obj_MainMenuPauseMenu</object>
           <object>objects\obj_OptionsPauseMenu</object>
           <object>objects\obj_ExitPauseMenu</object>
         </objects>
-        <object>objects\obj_SaveButton</object>
       </objects>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
       <object>objects\obj_Score</object>
       <object>objects\obj_goToDeathScreen</object>
+      <object>objects\obj_deathScreenController</object>
     </objects>
   </objects>
   <rooms name="rooms">
