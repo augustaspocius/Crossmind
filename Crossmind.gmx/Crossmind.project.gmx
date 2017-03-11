@@ -5,6 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\snd_Evilcackle</sound>
+    <sound>sound\snd_Keyopensdoor</sound>
+    <sound>sound\snd_Lockeddoorattempt</sound>
     <sound>sound\snd_BgMusic</sound>
     <sound>sound\snd_save</sound>
   </sounds>
