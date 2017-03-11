@@ -53,7 +53,6 @@
         <sprite>sprites\sp_goToDeathScreen</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\transparent</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
@@ -70,6 +69,7 @@
     <objects name="Characters">
       <object>objects\obj_player</object>
       <object>objects\obj_bullet</object>
+      <object>objects\obj_bullet_creations</object>
     </objects>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
@@ -80,9 +80,8 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
-      <object>objects\obj_key</object>
+      <object>objects\obj_key</obje
       <object>objects\obj_lock</object>
-      <object>objects\obj_door_lock</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -151,4 +150,3 @@
     <TutorialPage>0</TutorialPage>
   </TutorialState>
 </assets>
-
