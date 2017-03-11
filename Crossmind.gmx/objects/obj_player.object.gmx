@@ -109,8 +109,10 @@ btimer--;
 score--;
 if(score &lt;= 0)
 {
+if(room != DeathRoom)
+{
 game_restart();
-
+}
 }
 //Move Player
 if(hsp == 0 &amp;&amp; vsp == 0)
