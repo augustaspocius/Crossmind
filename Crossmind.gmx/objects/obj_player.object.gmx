@@ -489,8 +489,7 @@ if(btimer &lt; 0)
           </argument>
           <argument>
             <kind>5</kind>
-            <sprite>spr_player_
-            </sprite>
+            <sprite>spr_player_lives</sprite>
           </argument>
         </arguments>
       </action>
