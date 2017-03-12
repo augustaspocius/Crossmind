@@ -5,6 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\snd_Evilcackle</sound>
+    <sound>sound\snd_Keyopensdoor</sound>
+    <sound>sound\snd_Lockeddoorattempt</sound>
     <sound>sound\snd_BgMusic</sound>
     <sound>sound\snd_save</sound>
   </sounds>
@@ -20,12 +23,17 @@
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
       <sprite>sprites\spr_enemy_fireball</sprite>
+      <sprite>sprites\spr_purple_boss</sprite>
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_key</sprite>
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_lock</sprite>
+      <sprite>sprites\spr_door_lock</sprite>
+      <sprite>sprites\spr_checkpoint</sprite>
+      <sprite>sprites\spr_door</sprite>
+      <sprite>sprites\spr_corner</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -74,16 +82,21 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
+      <object>objects\obj_enemy_boss</object>
+      <object>objects\obj_enemy_boss_fireball</object>
     </objects>
     <objects name="Room_objects">
+      <object>objects\obj_door_lock</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_corner</object>
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
       <object>objects\obj_key</object>
+      <object>objects\obj_lock</object>
+      <object>objects\obj_checkpoint</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
-      <object>objects\cont_main</object>
     </objects>
     <objects name="Menu">
       <object>objects\OBJ_RoomController</object>
@@ -113,6 +126,7 @@
         </objects>
         <object>objects\obj_SaveButton</object>
       </objects>
+      <object>objects\cont_main</object>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
@@ -133,11 +147,13 @@
       <room>rooms\rm_door_test</room>
       <room>rooms\rm_down</room>
       <room>rooms\rm_left</room>
+      <room>rooms\rm_boss</room>
       <room>rooms\rm_right</room>
       <room>rooms\rm_start</room>
       <room>rooms\rm_up</room>
     </rooms>
     <room>rooms\rm_main</room>
+    <room>rooms\room13</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
