@@ -82,6 +82,8 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
+      <object>objects\obj_enemy_boss</object>
+      <object>objects\obj_enemy_boss_fireball</object>
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_door_lock</object>
