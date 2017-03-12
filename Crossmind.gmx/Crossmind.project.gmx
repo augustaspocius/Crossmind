@@ -27,10 +27,11 @@
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_key</sprite>
       <sprite>sprites\spr_block</sprite>
       <sprite>sprites\spr_lock</sprite>
+      <sprite>sprites\spr_door</sprite>
+      <sprite>sprites\spr_corner</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -82,6 +83,7 @@
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_wall</object>
+      <object>objects\obj_corner</object>
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
       <object>objects\obj_key</object>
@@ -144,6 +146,7 @@
       <room>rooms\rm_up</room>
     </rooms>
     <room>rooms\rm_main</room>
+    <room>rooms\room13</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
