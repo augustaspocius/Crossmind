@@ -147,11 +147,9 @@
       <room>rooms\rm_left</room>
       <room>rooms\rm_boss</room>
       <room>rooms\rm_right</room>
-      <room>rooms\rm_start</room>
       <room>rooms\rm_up</room>
+      <room>rooms\rm_start</room>
     </rooms>
-    <room>rooms\rm_main</room>
-    <room>rooms\room13</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
