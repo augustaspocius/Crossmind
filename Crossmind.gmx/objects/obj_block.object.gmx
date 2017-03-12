@@ -29,6 +29,34 @@
 vsp = 0;
 spd = 0; 
 invincability = 0;
+raktas = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_checkpoint">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(raktas = 1){
+instance_create(128, 320, obj_key)
+obj_key.col = c_red;
+raktas = 0;
+}
 </string>
           </argument>
         </arguments>
