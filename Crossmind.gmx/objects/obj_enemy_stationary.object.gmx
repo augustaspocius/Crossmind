@@ -32,14 +32,26 @@ bullet1 = instance_create(x,y,obj_enemy_fireball);
 bullet2 = instance_create(x,y,obj_enemy_fireball);
 bullet3 = instance_create(x,y,obj_enemy_fireball);
 bullet4 = instance_create(x,y,obj_enemy_fireball);
+bullet5 = instance_create(x,y,obj_enemy_fireball);
+bullet6 = instance_create(x,y,obj_enemy_fireball);
+bullet7 = instance_create(x,y,obj_enemy_fireball);
+bullet8 = instance_create(x,y,obj_enemy_fireball);
 bullet1.speed = 5;
 bullet2.speed = 5;
 bullet3.speed = 5;
 bullet4.speed = 5;
+bullet5.speed = 6;
+bullet6.speed = 6;
+bullet7.speed = 6;
+bullet8.speed = 6;
 bullet1.direction = 0;
 bullet2.direction = 90;
 bullet3.direction = 180;
 bullet4.direction = 270;
+bullet5.direction = 45;
+bullet6.direction = 135;
+bullet7.direction = 225;
+bullet8.direction = 315;
 shooting = 64;
 }
 
