@@ -26,14 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>game_save("SavedGame");
-screen_save("RoomBackground.png");
+screen_save("playableBackground.png");
+
 instance_create(x, y, Obj_PauseMenuController);
 instance_create(0,0, obj_Coursor);
-instance_activate_object(obj_ContinuePuaseMenu);
-instance_activate_object(obj_MainMenuPauseMenu);
-instance_activate_object(obj_OptionsPauseMenu);
-instance_activate_object(obj_ExitPauseMenu);
-instance_activate_object(obj_SaveButton);
+
+
 
 
 </string>

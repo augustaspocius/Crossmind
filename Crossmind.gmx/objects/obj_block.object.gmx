@@ -28,6 +28,7 @@
             <string>hsp = 0;
 vsp = 0;
 spd = 0; 
+invincability = 0;
 </string>
           </argument>
         </arguments>
