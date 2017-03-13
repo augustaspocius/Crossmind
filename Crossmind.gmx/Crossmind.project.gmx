@@ -65,6 +65,7 @@
     <background>background\Bg_menu</background>
     <background>background\Bg_PauseMEnuBG</background>
     <background>background\bg_Deathscreen</background>
+    <background>background\Bg_gamePlayBackground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -99,8 +100,6 @@
       <object>objects\cont_doors</object>
     </objects>
     <objects name="Menu">
-      <object>objects\OBJ_RoomController</object>
-      <object>objects\Obj_PauseMenuController</object>
       <object>objects\OB_SoundsButton</object>
       <object>objects\player01_ObjMenu</object>
       <object>objects\Player_ObjMenu</object>
@@ -127,6 +126,8 @@
         <object>objects\obj_SaveButton</object>
       </objects>
       <object>objects\cont_main</object>
+      <object>objects\Obj_PauseMenuController</object>
+      <object>objects\OBJ_RoomController</object>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
