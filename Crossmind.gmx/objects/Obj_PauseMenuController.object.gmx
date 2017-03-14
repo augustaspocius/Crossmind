@@ -30,12 +30,21 @@ global.mainMenu = false;
 global.destroyInstance = true;
 screen_save("GameScreen.png");
 
+background_visible[0] = false;
+
 
 instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 
+instance_create(room_width/2, room_height/5, obj_ContinuePuaseMenu);
+instance_create(room_width/2, room_height/2.44, obj_MainMenuPauseMenu);
+instance_create(room_width/2, room_height - room_height/2.44, obj_OptionsPauseMenu);
+instance_create(room_width/2, room_height - room_height/5, obj_ExitPauseMenu);
+background_add("GameScreen.png", false, false);
+background_visible[1] = true;
 
-background_replace(Bg_PauseMEnuBG, "GameScreen.png", false, false);
+
+
 
 </string>
           </argument>
@@ -64,14 +73,25 @@ background_replace(Bg_PauseMEnuBG, "GameScreen.png", false, false);
     file_delete("GameScreen.png");
 }
 instance_activate_all();
-instance_deactivate_object(obj_Coursor);
-instance_deactivate_object(obj_ContinuePuaseMenu);
-instance_deactivate_object(obj_MainMenuPauseMenu);
-instance_deactivate_object(obj_OptionsPauseMenu);
-instance_deactivate_object(obj_ExitPauseMenu);
-instance_deactivate_object(obj_SaveButton);
-background_replace(Bg_PauseMEnuBG, "EmptyBackground.png", false, false);
+with(obj_Coursor){
+instance_destroy()
+}
+with(obj_ContinuePuaseMenu){
+instance_destroy()
+}
+with(obj_MainMenuPauseMenu){
+instance_destroy()
+}
+with(obj_OptionsPauseMenu){
+instance_destroy()
+}
+with(obj_ExitPauseMenu){
+instance_destroy()
+}
 
+background_index[0] = true;
+background_visible[1] = false;
+background_visible[0] = true;
 
 </string>
           </argument>
@@ -172,8 +192,8 @@ file_delete("SavedGame");
           <argument>
             <kind>1</kind>
             <string>//draw_sprite(background,0, 640, 360);
-//draw_background(bck, 0, 0);
-instance_deactivate_all(true);
+//draw_background(Bg_gamePlayBackground, 0, 0);
+//instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 instance_activate_object(obj_ContinuePuaseMenu);
 instance_activate_object(obj_MainMenuPauseMenu);
@@ -187,7 +207,7 @@ instance_activate_object(obj_SaveButton);
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="80">
+    <event eventtype="10" enumb="27">
       <action>
         <libid>1</libid>
         <id>603</id>
