@@ -25,10 +25,34 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life = 10;
-shooting = 0;
-image_speed = 0.21
+            <string>life = 5;
+shooting = 64;
+image_speed = 0;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_Evilcackle</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -54,6 +78,7 @@ image_speed = 0.21
 
 if(shooting &lt;= 0)
 {
+image_index = 1;
 bullet1 = instance_create(x,y,obj_enemy_boss_fireball);
 bullet2 = instance_create(x,y,obj_enemy_boss_fireball);
 bullet3 = instance_create(x,y,obj_enemy_boss_fireball);
@@ -62,14 +87,14 @@ bullet5 = instance_create(x,y,obj_enemy_boss_fireball);
 bullet6 = instance_create(x,y,obj_enemy_boss_fireball);
 bullet7 = instance_create(x,y,obj_enemy_boss_fireball);
 bullet8 = instance_create(x,y,obj_enemy_boss_fireball);
-bullet1.speed = 1;
-bullet2.speed = 1;
-bullet3.speed = 1;
-bullet4.speed = 1;
-bullet5.speed = 1;
-bullet6.speed = 1;
-bullet7.speed = 1;
-bullet8.speed = 1;
+bullet1.speed = 10;
+bullet2.speed = 10;
+bullet3.speed = 10;
+bullet4.speed = 10;
+bullet5.speed = 10;
+bullet6.speed = 10;
+bullet7.speed = 10;
+bullet8.speed = 10;
 bullet1.direction = 0;
 bullet2.direction = 90;
 bullet3.direction = 180;
@@ -78,7 +103,7 @@ bullet5.direction = 45;
 bullet6.direction = 135;
 bullet7.direction = 225;
 bullet8.direction = 315;
-shooting = 64;
+shooting = 120;
 }
 speed = 3
 mp_potential_step(obj_player.x, obj_player.y,2,true);
@@ -92,6 +117,30 @@ mp_potential_step(obj_player.x, obj_player.y,2,true);
       </action>
     </event>
     <event eventtype="4" ename="obj_bullet_creations">
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_boss_death</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -128,6 +177,8 @@ y = random_range(75,400);
 if(life &lt;=0)
 {
 instance_destroy();
+audio_pause_sound(snd_footstep);
+room_goto(rm_winRoom);
 }
 </string>
           </argument>
@@ -171,9 +222,34 @@ y = random_range(75,400);
 if(life &lt;=0)
 {
 instance_destroy();
-show_message("YOU WIN!");
+audio_pause_sound(snd_footstep);
+room_goto(rm_winRoom);
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_boss_death</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

@@ -28,20 +28,17 @@
             <string>global.escape = false;
 global.mainMenu = false;
 global.destroyInstance = true;
-screen_save("GameScreen.png");
-
-background_visible[0] = false;
 
 
 instance_deactivate_all(true);
+
 instance_activate_object(obj_Coursor);
 
 instance_create(room_width/2, room_height/5, obj_ContinuePuaseMenu);
 instance_create(room_width/2, room_height/2.44, obj_MainMenuPauseMenu);
 instance_create(room_width/2, room_height - room_height/2.44, obj_OptionsPauseMenu);
 instance_create(room_width/2, room_height - room_height/5, obj_ExitPauseMenu);
-background_add("GameScreen.png", false, false);
-background_visible[1] = true;
+
 
 
 
@@ -89,7 +86,7 @@ with(obj_ExitPauseMenu){
 instance_destroy()
 }
 
-background_index[0] = true;
+//background_index[0] = true;
 background_visible[1] = false;
 background_visible[0] = true;
 
@@ -169,39 +166,6 @@ if(file_exists("GameScreen.png"))
 if(file_exists("SavedGame")){
 file_delete("SavedGame");
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//draw_sprite(background,0, 640, 360);
-//draw_background(Bg_gamePlayBackground, 0, 0);
-//instance_deactivate_all(true);
-instance_activate_object(obj_Coursor);
-instance_activate_object(obj_ContinuePuaseMenu);
-instance_activate_object(obj_MainMenuPauseMenu);
-instance_activate_object(obj_OptionsPauseMenu);
-instance_activate_object(obj_ExitPauseMenu);
-instance_activate_object(obj_SaveButton);
-
-
 </string>
           </argument>
         </arguments>
