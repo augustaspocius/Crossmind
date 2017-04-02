@@ -26,7 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>game_save("SavedGame");
-screen_save("RoomBackground.png");
+screen_save("GameScreen.png");
+
+background_index[1] = background_add("GameScreen.png", false, false);
+
+background_visible[1] = true;
+with(obj_Coursor){
+instance_destroy()
+}
 instance_create(x, y, Obj_PauseMenuController);
 instance_create(0,0, obj_Coursor);
 

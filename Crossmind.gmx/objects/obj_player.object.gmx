@@ -126,30 +126,45 @@ game_restart();
 }
 if(lives &lt;= 0)
 {
-game_restart();
+instance_destroy();
+audio_pause_sound(snd_footstep);
+audio_play_sound(snd_player_death, 2, false);
+room_goto(DeathRoom);
 }
 //Move Player
 if(hsp == 0 &amp;&amp; vsp == 0)
 {
  sprite_index = spr_player_idle;
+ audio_pause_sound(snd_footstep);
 }
 if(MOVERIGHT){image_xscale = 1;
 sprite_index = spr_player_walking;
 hsp += 0.55
 alarm[1] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
 }
 if(MOVELEFT){image_xscale = -1;
 sprite_index = spr_player_walking;
 hsp -= 0.55
-alarm[1] = 10;}
+alarm[1] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
+}
 if(MOVEUP){
 sprite_index = spr_player_walking_up;
 vsp -= 0.55
-alarm[0] = 10;}
+alarm[0] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
+}
 if(MOVEDOWN){
 sprite_index = spr_player_walking_down;
 vsp += 0.55
-alarm[0] = 10;}
+alarm[0] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
+}
 
 if (vsp &gt; 8)
 {
@@ -166,6 +181,10 @@ hsp = 8;
 if (hsp &lt; -8)
 {
 hsp = -8;
+}
+
+if(hsp != 0 || vsp != 0) &amp;&amp; (audio_is_paused(snd_footstep)){
+    audio_resume_sound(snd_footstep);
 }
 
 
@@ -201,6 +220,7 @@ scr_move(hsp ,vsp);
     with(obj_lock){
     if(key_col == col)
     instance_destroy();
+    audio_play_sound(snd_unlock,1,false);
     }
     with(obj_key){
     if(key_col == col)
@@ -253,6 +273,30 @@ invincability = 64;
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_damage</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="5" enumb="82">
