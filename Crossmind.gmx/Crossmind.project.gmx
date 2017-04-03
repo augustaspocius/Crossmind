@@ -17,6 +17,7 @@
     <sound>sound\snd_shot</sound>
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
+    <sound>sound\snd_music</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
