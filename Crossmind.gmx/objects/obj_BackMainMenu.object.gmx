@@ -98,6 +98,9 @@ else if(global.dead){
     room_goto(Main_Menu);
  
 }else room_goto(Main_Menu);
+
+
+instance_destroy();
 </string>
           </argument>
         </arguments>

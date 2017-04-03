@@ -28,19 +28,21 @@
             <string>global.escape = false;
 global.mainMenu = false;
 global.destroyInstance = true;
-screen_save("GameScreen.png");
 
 
 instance_deactivate_all(true);
+
 instance_activate_object(obj_Coursor);
-background_replace(1, "playableBackground.png", false, false);
-background_index[1] = true;
-background_visible[1] = true;
-instance_create(room_width/2, room_height/6, obj_ContinuePuaseMenu);
-instance_create(room_width/2, room_height/3, obj_MainMenuPauseMenu);
-instance_create(room_width/2, room_height/2, obj_OptionsPauseMenu);
-instance_create(room_width/2, room_height - room_height/3, obj_SaveButton);
-instance_create(room_width/2, room_height - room_height/6, obj_ExitPauseMenu);
+
+instance_create(room_width/2, room_height/5, obj_ContinuePuaseMenu);
+instance_create(room_width/2, room_height/2.44, obj_MainMenuPauseMenu);
+instance_create(room_width/2, room_height - room_height/2.44, obj_OptionsPauseMenu);
+instance_create(room_width/2, room_height - room_height/5, obj_ExitPauseMenu);
+
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -67,28 +69,26 @@ instance_create(room_width/2, room_height - room_height/6, obj_ExitPauseMenu);
 {
     file_delete("GameScreen.png");
 }
-
 instance_activate_all();
-with(obj_ContinuePuaseMenu){
-instance_destroy();
-}
 with(obj_Coursor){
-instance_destroy();
+instance_destroy()
+}
+with(obj_ContinuePuaseMenu){
+instance_destroy()
 }
 with(obj_MainMenuPauseMenu){
-instance_destroy();
+instance_destroy()
 }
 with(obj_OptionsPauseMenu){
-instance_destroy();
+instance_destroy()
 }
 with(obj_ExitPauseMenu){
-instance_destroy();
-}
-with(obj_SaveButton){
-instance_destroy();
+instance_destroy()
 }
 
-
+//background_index[0] = true;
+background_visible[1] = false;
+background_visible[0] = true;
 
 </string>
           </argument>
@@ -166,31 +166,6 @@ if(file_exists("GameScreen.png"))
 if(file_exists("SavedGame")){
 file_delete("SavedGame");
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-
-
 </string>
           </argument>
         </arguments>

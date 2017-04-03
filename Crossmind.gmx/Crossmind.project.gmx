@@ -10,6 +10,7 @@
     <sound>sound\snd_Lockeddoorattempt</sound>
     <sound>sound\snd_BgMusic</sound>
     <sound>sound\snd_save</sound>
+    <sound>sound\snd_backgroundmusic</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -24,13 +25,17 @@
       <sprite>sprites\spr_enemy</sprite>
       <sprite>sprites\spr_enemy_fireball</sprite>
       <sprite>sprites\spr_purple_boss</sprite>
+      <sprite>sprites\spr_boss_shoots</sprite>
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_key</sprite>
       <sprite>sprites\spr_block</sprite>
       <sprite>sprites\spr_lock</sprite>
+      <sprite>sprites\spr_door_lock</sprite>
+      <sprite>sprites\spr_checkpoint</sprite>
+      <sprite>sprites\spr_door</sprite>
+      <sprite>sprites\spr_corner</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -56,12 +61,23 @@
         <sprite>sprites\sp_Score</sprite>
         <sprite>sprites\sp_goToDeathScreen</sprite>
       </sprites>
+      <sprites name="Winscreen">
+        <sprite>sprites\sp_congratz</sprite>
+      </sprites>
+      <sprite>sprites\sp_fullscreen</sprite>
+      <sprites name="controls">
+        <sprite>sprites\sp_keybox</sprite>
+        <sprite>sprites\sp_saveControls</sprite>
+        <sprite>sprites\sp_keyController</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
     <background>background\Bg_PauseMEnuBG</background>
     <background>background\bg_Deathscreen</background>
+    <background>background\Bg_gamePlayBackground</background>
+    <background>background\bg_winScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -69,6 +85,9 @@
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_push.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_1</font>
+  </fonts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
@@ -79,21 +98,23 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
+      <object>objects\obj_enemy_boss</object>
+      <object>objects\obj_enemy_boss_fireball</object>
     </objects>
     <objects name="Room_objects">
+      <object>objects\obj_door_lock</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_corner</object>
       <object>objects\obj_door</object>
       <object>objects\obj_block</object>
       <object>objects\obj_key</object>
       <object>objects\obj_lock</object>
+      <object>objects\obj_checkpoint</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
-      <object>objects\cont_main</object>
     </objects>
     <objects name="Menu">
-      <object>objects\OBJ_RoomController</object>
-      <object>objects\Obj_PauseMenuController</object>
       <object>objects\OB_SoundsButton</object>
       <object>objects\player01_ObjMenu</object>
       <object>objects\Player_ObjMenu</object>
@@ -119,11 +140,28 @@
         </objects>
         <object>objects\obj_SaveButton</object>
       </objects>
+      <object>objects\cont_main</object>
+      <object>objects\Obj_PauseMenuController</object>
+      <object>objects\test</object>
+      <object>objects\OBJ_RoomController</object>
+      <object>objects\obj_fullscreen</object>
+      <object>objects\obj_options_fullscreen</object>
+      <objects name="control_keys">
+        <object>objects\obj_controllUp</object>
+        <object>objects\obj_controllDown</object>
+        <object>objects\obj_controllLeft</object>
+        <object>objects\obj_controllRight</object>
+        <object>objects\obj_saveControls</object>
+        <object>objects\obj_keyController</object>
+      </objects>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
       <object>objects\obj_Score</object>
       <object>objects\obj_goToDeathScreen</object>
+    </objects>
+    <objects name="Winscreen">
+      <object>objects\obj_titleGratz</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -133,17 +171,18 @@
       <room>rooms\Controls_Room</room>
       <room>rooms\Options_room</room>
       <room>rooms\DeathRoom</room>
+      <room>rooms\rm_winRoom</room>
     </rooms>
     <rooms name="Test">
       <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
       <room>rooms\rm_down</room>
       <room>rooms\rm_left</room>
+      <room>rooms\rm_boss</room>
       <room>rooms\rm_right</room>
-      <room>rooms\rm_start</room>
       <room>rooms\rm_up</room>
+      <room>rooms\rm_start</room>
     </rooms>
-    <room>rooms\rm_main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
