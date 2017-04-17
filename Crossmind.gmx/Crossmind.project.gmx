@@ -71,6 +71,7 @@
         <sprite>sprites\sp_congratz</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_room</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
