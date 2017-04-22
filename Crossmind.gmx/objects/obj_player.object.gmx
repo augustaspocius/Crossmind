@@ -1169,4 +1169,7 @@ if(btimer &lt; 0)
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>
 </object>
+<<<<<<< HEAD
 >>>>>>> parent of b8c7a6d... Powerups/Pathfinding
+=======
+>>>>>>> refs/remotes/origin/master
