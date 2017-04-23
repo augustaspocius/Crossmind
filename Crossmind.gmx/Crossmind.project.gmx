@@ -17,6 +17,8 @@
     <sound>sound\snd_shot</sound>
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
+    <sound>sound\snd_music</sound>
+    <sound>sound\snd_music2</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -80,6 +82,8 @@
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
+    <background>background\Bg_intro1</background>
+    <background>background\Bg_intro2</background>
     <background>background\Bg_PauseMEnuBG</background>
     <background>background\bg_Deathscreen</background>
     <background>background\Bg_gamePlayBackground</background>
@@ -94,6 +98,9 @@
     <script>scripts\scr_push.gml</script>
     <script>scripts\grid_place_meeting.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
@@ -160,6 +167,7 @@
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
     </objects>
+<<<<<<< HEAD
     <object>objects\obj_room</object>
     <object>objects\obj_top_doors</object>
     <object>objects\obj_bot_doors</object>
@@ -170,6 +178,20 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
+=======
+    <objects name="Intro">
+      <object>objects\obj_intro</object>
+      <object>objects\obj_intro2</object>
+      <object>objects\obj_intro_skip</object>
+      <object>objects\obj_intro_skip2</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <rooms name="Intro">
+      <room>rooms\rm_intro</room>
+      <room>rooms\rm_intro2</room>
+    </rooms>
+>>>>>>> origin/master
     <rooms name="Menu">
       <room>rooms\theFirstRoom</room>
       <room>rooms\Main_Menu</room>
