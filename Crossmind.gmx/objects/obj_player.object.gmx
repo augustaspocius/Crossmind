@@ -36,6 +36,10 @@ steps = 0;
 score = 120;
 steps = 0;
 invincability = 0;
+ShotDirection = 0; //Random element for shooting
+BulletsCreated = 1; //NumberOfBulletsShot
+BulletsSpeed = 0; //Increased bullet speed
+BulletsTime = 0; //Increased bullet time
 
 </string>
           </argument>
@@ -234,6 +238,33 @@ scr_move(hsp ,vsp);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_enemy_attack">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (invincability &lt;=0)
+{
+lives --;
+invincability = 64;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_enemy_fireball">
       <action>
         <libid>1</libid>
@@ -290,7 +321,7 @@ invincability = 64;
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>snd_damage</sound>
+            <sound>-100</sound>
           </argument>
           <argument>
             <kind>3</kind>
@@ -344,15 +375,17 @@ invincability = 64;
         if(btimer &lt; 0){
         btimer = room_speed * 0.5;  
         bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15 + BulletsSpeed;
+        bullet.direction = 270 + ShotDirection;
         bullet.speed = 15;
         bullet.direction = 270;
         if(MOVEUP)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
         if(MOVEDOWN)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
         if(MOVELEFT)
         {
@@ -391,6 +424,8 @@ invincability = 64;
         
         btimer = room_speed * 0.5;  
         bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15 + BulletsSpeed;
+        bullet.direction = 0 + ShotDirection;
         bullet.speed = 15;
         bullet.direction = 0;
         if(MOVEUP)
@@ -403,11 +438,11 @@ invincability = 64;
         }
         if(MOVELEFT)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
         if(MOVERIGHT)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
 }
 </string>
@@ -437,15 +472,17 @@ if(btimer &lt; 0)
 {
         btimer = room_speed * 0.5;  
         bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15 + BulletsSpeed;
+        bullet.direction = 90 + ShotDirection;
         bullet.speed = 15;
         bullet.direction = 90;
         if(MOVEUP)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
         if(MOVEDOWN)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
         if(MOVELEFT)
         {
@@ -489,6 +526,25 @@ if(btimer &lt; 0)
         bullet.direction = 180;
         if(MOVEUP)
         {
+            ShotDirection = random_range(-15 * i,15 * i); //Random element for shooting
+            bullet = instance_create(x,y,obj_bullet);
+            bullet.speed = 15 + BulletsSpeed;
+            bullet.direction = 180 + ShotDirection;
+            if(MOVEUP)
+            {
+            bullet.direction = 200 + ShotDirection;
+            }
+            if(MOVEDOWN)
+            {
+            bullet.direction = 160 + ShotDirection;
+            }
+            if(MOVELEFT)
+            {
+            bullet.speed = 20 + BulletsSpeed;
+            }
+            if(MOVERIGHT)
+            {
+            bullet.speed = 10 + BulletsSpeed;
         bullet.direction = 200;
         }
         if(MOVEDOWN)

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>life = 5;
 shooting = 64;
+attack = 140;
 image_speed = 0;
 </string>
           </argument>
@@ -48,7 +49,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>snd_Evilcackle</sound>
+            <sound>-100</sound>
           </argument>
           <argument>
             <kind>3</kind>
@@ -75,7 +76,12 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>shooting --;
-
+attack --;
+if(attack &lt;= 0)
+{
+attack = instance_create(x,y,obj_enemy_attack);
+attack = 140;
+}
 if(shooting &lt;= 0)
 {
 image_index = 1;
