@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_bullet">
+    <event eventtype="4" ename="&lt;undefined&gt;">
       <action>
         <libid>1</libid>
         <id>603</id>

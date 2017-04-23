@@ -169,6 +169,21 @@
     </rooms>
     <rooms name="Menu">
       <room>rooms\theFirstRoom</room>
+      <room>rooms\Main_Menu</room>
+      <room>rooms\Controls_Room</room>
+      <room>rooms\Options_room</room>
+      <room>rooms\DeathRoom</room>
+      <room>rooms\rm_winRoom</room>
+    </rooms>
+    <rooms name="Test">
+      <room>rooms\rm_collision_test</room>
+      <room>rooms\rm_door_test</room>
+      <room>rooms\rm_down</room>
+      <room>rooms\rm_left</room>
+      <room>rooms\rm_boss</room>
+      <room>rooms\rm_right</room>
+      <room>rooms\rm_up</room>
+      <room>rooms\rm_start</room>
     </rooms>
   </rooms>
   <help>
