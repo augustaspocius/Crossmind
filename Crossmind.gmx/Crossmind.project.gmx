@@ -35,6 +35,7 @@
       <sprite>sprites\spr_enemy_fireball</sprite>
       <sprite>sprites\spr_purple_boss</sprite>
       <sprite>sprites\spr_boss_shoots</sprite>
+      <sprite>sprites\spr_enemy_attack</sprite>
     </sprites>
     <sprites name="Room_sprites">
       <sprite>sprites\spr_wall</sprite>
@@ -114,6 +115,7 @@
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
       <object>objects\obj_enemy_boss_fireball</object>
+      <object>objects\obj_enemy_attack</object>
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_door_lock</object>
@@ -168,6 +170,7 @@
       <object>objects\obj_titleGratz</object>
     </objects>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <object>objects\obj_room</object>
     <object>objects\obj_top_doors</object>
     <object>objects\obj_bot_doors</object>
@@ -179,6 +182,12 @@
   <rooms name="rooms">
     <room>rooms\rm_start</room>
 =======
+=======
+    <objects name="Powerups">
+      <object>objects\obj_multi_shot</object>
+      <object>objects\obj_longer_shots</object>
+      <object>objects\obj_faster_shots</object>
+>>>>>>> origin/master
     <objects name="Intro">
       <object>objects\obj_intro</object>
       <object>objects\obj_intro2</object>
