@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0.21
 shooting = 64;
+
 grid = mp_grid_create(0,0,room_width/32, room_height/32, 32,32);
 path = path_add()
 mp_grid_add_instances(path, obj_wall, 1)
@@ -68,7 +69,6 @@ bullet3.direction = 180;
 bullet4.direction = 270;
 shooting = 64;
 }
-<<<<<<< HEAD
 //grid=mp_grid_create(0,0,room_width/32,room_height/32,32,32);
 //path=path_add();
 //mp_grid_add_instances(path,obj_wall,1);
@@ -89,19 +89,6 @@ path = path_add();
 mp_grid_path(grid, path, x, y,obj_player.x, obj_player.y, 1);
 path_start(path, 1.8, path_action_stop, 1);
 }
-
-=======
-<<<<<<< HEAD
-//grid=mp_grid_create(0,0,room_width/32,room_height/32,32,32);
-//path=path_add();
-//mp_grid_add_instances(path,obj_wall,1);
-//mp_grid_add_instances(path,obj_player,1);
-//mp_grid_path(grid,path,x,y,obj_player.x,obj_player.y,1);
-//path_start(path,2,"",1);
-=======
->>>>>>> parent of b8c7a6d... Powerups/Pathfinding
-mp_potential_step(obj_player.x, obj_player.y,2,true);
->>>>>>> origin/master
 
 </string>
           </argument>

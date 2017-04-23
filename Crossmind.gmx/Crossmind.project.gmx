@@ -18,7 +18,6 @@
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
     <sound>sound\snd_music</sound>
-    <sound>sound\snd_music2</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -28,6 +27,7 @@
       <sprite>sprites\spr_player_walking_up</sprite>
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
+      <sprite>sprites\spr_powerup</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
@@ -76,8 +76,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
-    <background>background\Bg_intro1</background>
-    <background>background\Bg_intro2</background>
     <background>background\Bg_PauseMEnuBG</background>
     <background>background\bg_Deathscreen</background>
     <background>background\Bg_gamePlayBackground</background>
@@ -89,15 +87,14 @@
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_push.gml</script>
   </scripts>
-  <fonts name="fonts">
-    <font>fonts\font0</font>
-  </fonts>
   <objects name="objects">
     <objects name="Characters">
+      <object>objects\obj_player</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet_creations</object>
     </objects>
     <objects name="Enemies">
+      <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
@@ -155,18 +152,11 @@
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
     </objects>
-    <objects name="Intro">
-      <object>objects\obj_intro</object>
-      <object>objects\obj_intro2</object>
-      <object>objects\obj_intro_skip</object>
-      <object>objects\obj_intro_skip2</object>
+    <objects name="Powerups">
+      <object>objects\obj_multi_shot</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <rooms name="Intro">
-      <room>rooms\rm_intro</room>
-      <room>rooms\rm_intro2</room>
-    </rooms>
     <rooms name="Menu">
       <room>rooms\theFirstRoom</room>
       <room>rooms\Main_Menu</room>
