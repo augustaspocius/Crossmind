@@ -18,6 +18,7 @@
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
     <sound>sound\snd_music</sound>
+    <sound>sound\snd_music2</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -93,10 +94,12 @@
   </fonts>
   <objects name="objects">
     <objects name="Characters">
+      <object>objects\obj_player</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet_creations</object>
     </objects>
     <objects name="Enemies">
+      <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
@@ -158,7 +161,7 @@
       <object>objects\obj_intro</object>
       <object>objects\obj_intro2</object>
       <object>objects\obj_intro_skip</object>
-      <object>objects\onj_intro_skip2</object>
+      <object>objects\obj_intro_skip2</object>
     </objects>
   </objects>
   <rooms name="rooms">
