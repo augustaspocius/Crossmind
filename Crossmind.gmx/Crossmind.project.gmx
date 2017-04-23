@@ -156,6 +156,8 @@
     </objects>
     <objects name="Powerups">
       <object>objects\obj_multi_shot</object>
+      <object>objects\obj_longer_shots</object>
+      <object>objects\obj_faster_shots</object>
     </objects>
   </objects>
   <rooms name="rooms">

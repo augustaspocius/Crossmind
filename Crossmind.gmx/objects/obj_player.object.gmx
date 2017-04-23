@@ -38,6 +38,8 @@ steps = 0;
 invincability = 0;
 ShotDirection = 0; //Random element for shooting
 BulletsCreated = 1; //NumberOfBulletsShot
+BulletsSpeed = 0; //Increased bullet speed
+BulletsTime = 0; //Increased bullet time
 </string>
           </argument>
         </arguments>
@@ -376,15 +378,15 @@ invincability = 64;
         {
         ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
+        bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 270 + ShotDirection;
         if(MOVEUP)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
         if(MOVEDOWN)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
         if(MOVELEFT)
         {
@@ -429,7 +431,7 @@ ShotDirection = 0;
         {
         ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
+        bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 0 + ShotDirection;
         if(MOVEUP)
         {
@@ -441,11 +443,11 @@ ShotDirection = 0;
         }
         if(MOVELEFT)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
         if(MOVERIGHT)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
         }
 }
@@ -481,15 +483,15 @@ if(btimer &lt; 0)
         {
         ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
+        bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 90 + ShotDirection;
         if(MOVEUP)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
         if(MOVEDOWN)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
         if(MOVELEFT)
         {
@@ -534,7 +536,7 @@ if(btimer &lt; 0)
         {
             ShotDirection = random_range(-15 * i,15 * i); //Random element for shooting
             bullet = instance_create(x,y,obj_bullet);
-            bullet.speed = 15;
+            bullet.speed = 15 + BulletsSpeed;
             bullet.direction = 180 + ShotDirection;
             if(MOVEUP)
             {
@@ -546,11 +548,11 @@ if(btimer &lt; 0)
             }
             if(MOVELEFT)
             {
-            bullet.speed = 20;
+            bullet.speed = 20 + BulletsSpeed;
             }
             if(MOVERIGHT)
             {
-            bullet.speed = 10;
+            bullet.speed = 10 + BulletsSpeed;
         }
         }
 }
