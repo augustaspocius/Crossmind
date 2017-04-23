@@ -62,7 +62,7 @@ message_length = string_length(message[message_current]); //get the number of ch
           </argument>
           <argument>
             <kind>3</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
