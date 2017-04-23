@@ -14,8 +14,7 @@
 room_goto(Main_Menu);
 window_set_cursor(cr_none);
 global.dead = false;
-global.loadNewGame = true;
-audio_play_sound(snd_music, 1, true);</code>
+global.loadNewGame = true;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
