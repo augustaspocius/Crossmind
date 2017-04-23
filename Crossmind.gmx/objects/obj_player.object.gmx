@@ -40,6 +40,7 @@ ShotDirection = 0; //Random element for shooting
 BulletsCreated = 1; //NumberOfBulletsShot
 BulletsSpeed = 0; //Increased bullet speed
 BulletsTime = 0; //Increased bullet time
+
 </string>
           </argument>
         </arguments>
@@ -373,13 +374,11 @@ invincability = 64;
 //Shooting
         if(btimer &lt; 0){
         btimer = room_speed * 0.5;  
-        var i;
-        for(i = 0; i &lt; BulletsCreated; i++)
-        {
-        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 270 + ShotDirection;
+        bullet.speed = 15;
+        bullet.direction = 270;
         if(MOVEUP)
         {
         bullet.speed = 10 + BulletsSpeed;
@@ -390,15 +389,13 @@ invincability = 64;
         }
         if(MOVELEFT)
         {
-        bullet.direction = 290 + ShotDirection;
+        bullet.direction = 290;
         }
         if(MOVERIGHT)
         {
-        bullet.direction = 250 + ShotDirection;
-        }
+        bullet.direction = 250;
         }
 }
-ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -426,20 +423,18 @@ ShotDirection = 0;
         if(btimer &lt; 0){
         
         btimer = room_speed * 0.5;  
-        var i;
-        for(i = 0; i &lt; BulletsCreated; i++)
-        {
-        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 0 + ShotDirection;
+        bullet.speed = 15;
+        bullet.direction = 0;
         if(MOVEUP)
         {
-        bullet.direction = 340 + ShotDirection;
+        bullet.direction = 340;
         }
         if(MOVEDOWN)
         {
-        bullet.direction = 20 + ShotDirection;
+        bullet.direction = 20;
         }
         if(MOVELEFT)
         {
@@ -449,9 +444,7 @@ ShotDirection = 0;
         {
         bullet.speed = 20 + BulletsSpeed;
         }
-        }
 }
-ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -478,13 +471,11 @@ ShotDirection = 0;
 if(btimer &lt; 0)
 {
         btimer = room_speed * 0.5;  
-        var i;
-        for(i = 0; i &lt; BulletsCreated; i++)
-        {
-        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 90 + ShotDirection;
+        bullet.speed = 15;
+        bullet.direction = 90;
         if(MOVEUP)
         {
         bullet.speed = 20 + BulletsSpeed;
@@ -495,15 +486,13 @@ if(btimer &lt; 0)
         }
         if(MOVELEFT)
         {
-        bullet.direction = 70 + ShotDirection;
+        bullet.direction = 70;
         }
         if(MOVERIGHT)
         {
-        bullet.direction = 110 + ShotDirection;
-        }
+        bullet.direction = 110;
         }
 }
-ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -529,10 +518,13 @@ ShotDirection = 0;
             <string>image_xscale = -1
 //Shooting
 if(btimer &lt; 0)
-{    
+{
+        
         btimer = room_speed * 0.5; 
-        var i;
-        for(i = 0; i &lt; BulletsCreated; i++)
+        bullet = instance_create(x,y,obj_bullet);
+        bullet.speed = 15;
+        bullet.direction = 180;
+        if(MOVEUP)
         {
             ShotDirection = random_range(-15 * i,15 * i); //Random element for shooting
             bullet = instance_create(x,y,obj_bullet);
@@ -553,10 +545,21 @@ if(btimer &lt; 0)
             if(MOVERIGHT)
             {
             bullet.speed = 10 + BulletsSpeed;
+        bullet.direction = 200;
         }
+        if(MOVEDOWN)
+        {
+        bullet.direction = 160;
+        }
+        if(MOVELEFT)
+        {
+        bullet.speed = 20;
+        }
+        if(MOVERIGHT)
+        {
+        bullet.speed = 10;
         }
 }
-ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -650,6 +653,30 @@ ShotDirection = 0;
           <argument>
             <kind>1</kind>
             <string>Timer: </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>-1</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
