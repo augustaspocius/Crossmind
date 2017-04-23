@@ -33,16 +33,12 @@ lives = 5;
 key_on = c_white;
 steps = 0;
 invincability = 0;
-<<<<<<< HEAD
 score = 120;
 btimer = 0;
-=======
 ShotDirection = 0; //Random element for shooting
 BulletsCreated = 1; //NumberOfBulletsShot
 BulletsSpeed = 0; //Increased bullet speed
 BulletsTime = 0; //Increased bullet time
-
->>>>>>> origin/master
 </string>
           </argument>
         </arguments>
@@ -599,6 +595,7 @@ if(btimer &lt; 0)
         if(MOVERIGHT)
         {
         bullet.speed = 10;
+        }
         }
 }
 </string>

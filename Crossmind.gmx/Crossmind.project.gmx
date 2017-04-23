@@ -105,7 +105,6 @@
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
-      <object>objects\object51</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet_creations</object>
     </objects>
@@ -169,30 +168,24 @@
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
     </objects>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <object>objects\obj_room</object>
-    <object>objects\obj_top_doors</object>
-    <object>objects\obj_bot_doors</object>
-    <object>objects\obj_right_door</object>
-    <object>objects\obj_left_door</object>
-    <object>objects\obj_generate_rooms</object>
-    <object>objects\obj_level</object>
-  </objects>
-  <rooms name="rooms">
-    <room>rooms\rm_start</room>
-=======
-=======
-    <objects name="Powerups">
-      <object>objects\obj_multi_shot</object>
-      <object>objects\obj_longer_shots</object>
-      <object>objects\obj_faster_shots</object>
->>>>>>> origin/master
     <objects name="Intro">
       <object>objects\obj_intro</object>
       <object>objects\obj_intro2</object>
       <object>objects\obj_intro_skip</object>
       <object>objects\obj_intro_skip2</object>
+    </objects>
+    <objects name="Generavimo">
+      <object>objects\obj_room</object>
+      <object>objects\obj_top_doors</object>
+      <object>objects\obj_bot_doors</object>
+      <object>objects\obj_right_door</object>
+      <object>objects\obj_left_door</object>
+      <object>objects\obj_generate_rooms</object>
+      <object>objects\obj_level</object>
+    </objects>
+    <objects name="Powerups">
+      <object>objects\obj_longer_shots</object>
+      <object>objects\obj_faster_shots</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -200,7 +193,6 @@
       <room>rooms\rm_intro</room>
       <room>rooms\rm_intro2</room>
     </rooms>
->>>>>>> origin/master
     <rooms name="Menu">
       <room>rooms\theFirstRoom</room>
       <room>rooms\Main_Menu</room>
@@ -208,6 +200,16 @@
       <room>rooms\Options_room</room>
       <room>rooms\DeathRoom</room>
       <room>rooms\rm_winRoom</room>
+    </rooms>
+    <rooms name="Test">
+      <room>rooms\rm_collision_test</room>
+      <room>rooms\rm_door_test</room>
+      <room>rooms\rm_down</room>
+      <room>rooms\rm_left</room>
+      <room>rooms\rm_boss</room>
+      <room>rooms\rm_right</room>
+      <room>rooms\rm_up</room>
+      <room>rooms\rm_start</room>
     </rooms>
   </rooms>
   <constants number="5">
