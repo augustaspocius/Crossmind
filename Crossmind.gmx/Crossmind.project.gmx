@@ -26,6 +26,7 @@
       <sprite>sprites\spr_player_walking_up</sprite>
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
+      <sprite>sprites\empty</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
@@ -72,6 +73,10 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_room</sprite>
+    <sprite>sprites\spr_door_left</sprite>
+    <sprite>sprites\spr_bot_door</sprite>
+    <sprite>sprites\spr_right_door</sprite>
+    <sprite>sprites\spr_top_door</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
@@ -79,16 +84,20 @@
     <background>background\bg_Deathscreen</background>
     <background>background\Bg_gamePlayBackground</background>
     <background>background\bg_winScreen</background>
+    <background>background\bg_floor</background>
+    <background>background\bg_wall</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\mouse_hover_script.gml</script>
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_push.gml</script>
+    <script>scripts\grid_place_meeting.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
+      <object>objects\object51</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet_creations</object>
     </objects>
@@ -151,8 +160,16 @@
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
     </objects>
+    <object>objects\obj_room</object>
+    <object>objects\obj_top_doors</object>
+    <object>objects\obj_bot_doors</object>
+    <object>objects\obj_right_door</object>
+    <object>objects\obj_left_door</object>
+    <object>objects\obj_generate_rooms</object>
+    <object>objects\obj_level</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
     <rooms name="Menu">
       <room>rooms\theFirstRoom</room>
       <room>rooms\Main_Menu</room>
@@ -161,17 +178,14 @@
       <room>rooms\DeathRoom</room>
       <room>rooms\rm_winRoom</room>
     </rooms>
-    <rooms name="Test">
-      <room>rooms\rm_collision_test</room>
-      <room>rooms\rm_door_test</room>
-      <room>rooms\rm_down</room>
-      <room>rooms\rm_left</room>
-      <room>rooms\rm_boss</room>
-      <room>rooms\rm_right</room>
-      <room>rooms\rm_up</room>
-      <room>rooms\rm_start</room>
-    </rooms>
   </rooms>
+  <constants number="5">
+    <constant name="CELL_WIDTH">64</constant>
+    <constant name="CELL_HEIGHT">64</constant>
+    <constant name="WALL">-5</constant>
+    <constant name="FLOOR">-6</constant>
+    <constant name="VOID">-7</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
