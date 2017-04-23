@@ -218,7 +218,7 @@ instance_destroy();
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="&lt;undefined&gt;">
+    <event eventtype="4" ename="obj_bullet">
       <action>
         <libid>1</libid>
         <id>211</id>
