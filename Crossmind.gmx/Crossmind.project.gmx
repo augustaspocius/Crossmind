@@ -211,6 +211,7 @@
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
     </rooms>
+    <room>rooms\rm_generate</room>
   </rooms>
   <constants number="5">
     <constant name="CELL_WIDTH">64</constant>
