@@ -3,8 +3,8 @@
   <caption></caption>
   <width>960</width>
   <height>540</height>
-  <vsnap>5</vsnap>
-  <hsnap>5</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -52,11 +52,6 @@
   </views>
   <instances>
     <instance objName="obj_BackOptions" x="512" y="448" name="inst_DD731AC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controllUp" x="165" y="190" name="inst_FC93A00E" locked="0" code="" scaleX="0.537634432315826" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controllDown" x="165" y="245" name="inst_D3CE9A3E" locked="0" code="" scaleX="0.531914889812469" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controllLeft" x="100" y="245" name="inst_1806208A" locked="0" code="" scaleX="0.569999992847443" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controllRight" x="225" y="245" name="inst_CDB3FD36" locked="0" code="" scaleX="0.479999989271164" scaleY="0.592105269432068" colour="4294967295" rotation="0"/>
-    <instance objName="obj_saveControls" x="45" y="415" name="inst_29C2DEB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

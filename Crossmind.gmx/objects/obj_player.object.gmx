@@ -36,7 +36,10 @@ steps = 0;
 score = 120;
 steps = 0;
 invincability = 0;
-
+ShotDirection = 0; //Random element for shooting
+BulletsSpeed = 0; //Increased bullet speed
+BulletsTime = 0; //Increased bullet time
+BulletsCreated = 1; //NumberOfBulletsShot
 </string>
           </argument>
         </arguments>
@@ -105,10 +108,10 @@ invincability = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.MOVELEFT = keyboard_check(ord('A'));
-global.MOVERIGHT = keyboard_check(ord('D'));
-global.MOVEUP = keyboard_check(ord('W'));
-global.MOVEDOWN = keyboard_check(ord('S'));
+            <string>MOVELEFT = keyboard_check(ord('A'));
+MOVERIGHT = keyboard_check(ord('D'));
+MOVEUP = keyboard_check(ord('W'));
+MOVEDOWN = keyboard_check(ord('S'));
 btimer--;
 steps += 1;
 if steps &gt;= room_speed
@@ -127,30 +130,44 @@ game_restart();
 if(lives &lt;= 0)
 {
 instance_destroy();
+audio_pause_sound(snd_footstep);
+audio_play_sound(snd_player_death, 2, false);
 room_goto(DeathRoom);
 }
 //Move Player
 if(hsp == 0 &amp;&amp; vsp == 0)
 {
  sprite_index = spr_player_idle;
+ audio_pause_sound(snd_footstep);
 }
-if(global.MOVERIGHT){image_xscale = 1;
+if(MOVERIGHT){image_xscale = 1;
 sprite_index = spr_player_walking;
 hsp += 0.55
 alarm[1] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
 }
-if(global.MOVELEFT){image_xscale = -1;
+if(MOVELEFT){image_xscale = -1;
 sprite_index = spr_player_walking;
 hsp -= 0.55
-alarm[1] = 10;}
-if(global.MOVEUP){
+alarm[1] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
+}
+if(MOVEUP){
 sprite_index = spr_player_walking_up;
 vsp -= 0.55
-alarm[0] = 10;}
-if(global.MOVEDOWN){
+alarm[0] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
+}
+if(MOVEDOWN){
 sprite_index = spr_player_walking_down;
 vsp += 0.55
-alarm[0] = 10;}
+alarm[0] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
+}
 
 if (vsp &gt; 8)
 {
@@ -167,6 +184,10 @@ hsp = 8;
 if (hsp &lt; -8)
 {
 hsp = -8;
+}
+
+if(hsp != 0 || vsp != 0) &amp;&amp; (audio_is_paused(snd_footstep)){
+    audio_resume_sound(snd_footstep);
 }
 
 
@@ -202,6 +223,7 @@ scr_move(hsp ,vsp);
     with(obj_lock){
     if(key_col == col)
     instance_destroy();
+    audio_play_sound(snd_unlock,1,false);
     }
     with(obj_key){
     if(key_col == col)
@@ -209,6 +231,33 @@ scr_move(hsp ,vsp);
     }
     key_on=c_white;
     lives++;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy_attack">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (invincability &lt;=0)
+{
+lives --;
+invincability = 64;
 }
 </string>
           </argument>
@@ -255,6 +304,30 @@ invincability = 64;
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>-100</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="82">
       <action>
@@ -300,26 +373,32 @@ invincability = 64;
 //Shooting
         if(btimer &lt; 0){
         btimer = room_speed * 0.5;  
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
+        {
+        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
-        bullet.direction = 270;
-        if(global.MOVEUP)
+        bullet.speed = 15 + BulletsSpeed;
+        bullet.direction = 270 + ShotDirection;
+        if(MOVEUP)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
-        if(global.MOVEDOWN)
+        if(MOVEDOWN)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
-        if(global.MOVELEFT)
+        if(MOVELEFT)
         {
-        bullet.direction = 290;
+        bullet.direction = 290 + ShotDirection;
         }
-        if(global.MOVERIGHT)
+        if(MOVERIGHT)
         {
-        bullet.direction = 250;
+        bullet.direction = 250 + ShotDirection;
+        }
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -347,26 +426,32 @@ invincability = 64;
         if(btimer &lt; 0){
         
         btimer = room_speed * 0.5;  
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
+        {
+        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
-        bullet.direction = 0;
-        if(global.MOVEUP)
+        bullet.speed = 15 + BulletsSpeed;
+        bullet.direction = 0 + ShotDirection;
+        if(MOVEUP)
         {
-        bullet.direction = 340;
+        bullet.direction = 340 + ShotDirection;
         }
-        if(global.MOVEDOWN)
+        if(MOVEDOWN)
         {
-        bullet.direction = 20;
+        bullet.direction = 20 + ShotDirection;
         }
-        if(global.MOVELEFT)
+        if(MOVELEFT)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
-        if(global.MOVERIGHT)
+        if(MOVERIGHT)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
+        }
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -393,26 +478,32 @@ invincability = 64;
 if(btimer &lt; 0)
 {
         btimer = room_speed * 0.5;  
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
+        {
+        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
-        bullet.direction = 90;
-        if(global.MOVEUP)
+        bullet.speed = 15 + BulletsSpeed;
+        bullet.direction = 90 + ShotDirection;
+        if(MOVEUP)
         {
-        bullet.speed = 20;
+        bullet.speed = 20 + BulletsSpeed;
         }
-        if(global.MOVEDOWN)
+        if(MOVEDOWN)
         {
-        bullet.speed = 10;
+        bullet.speed = 10 + BulletsSpeed;
         }
-        if(global.MOVELEFT)
+        if(MOVELEFT)
         {
-        bullet.direction = 70;
+        bullet.direction = 70 + ShotDirection;
         }
-        if(global.MOVERIGHT)
+        if(MOVERIGHT)
         {
-        bullet.direction = 110;
+        bullet.direction = 110 + ShotDirection;
+        }
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -435,32 +526,38 @@ if(btimer &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = -1
+            <string>
+image_xscale = -1
 //Shooting
 if(btimer &lt; 0)
-{
-        
+{    
         btimer = room_speed * 0.5; 
-        bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
-        bullet.direction = 180;
-        if(global.MOVEUP)
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
         {
-        bullet.direction = 200;
+            ShotDirection = random_range(-15 * i,15 * i); //Random element for shooting
+            bullet = instance_create(x,y,obj_bullet);
+            bullet.speed = 15 + BulletsSpeed;
+            bullet.direction = 180 + ShotDirection;
+            if(MOVEUP)
+            {
+            bullet.direction = 200 + ShotDirection;
+            }
+            if(MOVEDOWN)
+            {
+            bullet.direction = 160 + ShotDirection;
+            }
+            if(MOVELEFT)
+            {
+            bullet.speed = 20 + BulletsSpeed;
+            }
+            if(MOVERIGHT)
+            {
+            bullet.speed = 10 + BulletsSpeed;
         }
-        if(global.MOVEDOWN)
-        {
-        bullet.direction = 160;
-        }
-        if(global.MOVELEFT)
-        {
-        bullet.speed = 20;
-        }
-        if(global.MOVERIGHT)
-        {
-        bullet.speed = 10;
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -554,6 +651,30 @@ if(btimer &lt; 0)
           <argument>
             <kind>1</kind>
             <string>Timer: </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>-1</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

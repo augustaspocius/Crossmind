@@ -25,10 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life = 10;
+            <string>life = 5;
 shooting = 64;
+attack = 140;
 image_speed = 0;
+
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>-100</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -51,7 +77,12 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>shooting --;
-
+attack --;
+if(attack &lt;= 0)
+{
+attack = instance_create(x,y,obj_enemy_attack);
+attack = 140;
+}
 if(shooting &lt;= 0)
 {
 image_index = 1;
@@ -86,13 +117,36 @@ mp_potential_step(obj_player.x, obj_player.y,2,true);
 
 
 
-
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_bullet_creations">
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_boss_death</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -129,6 +183,8 @@ y = random_range(75,400);
 if(life &lt;=0)
 {
 instance_destroy();
+audio_pause_sound(snd_footstep);
+room_goto(rm_winRoom);
 }
 </string>
           </argument>
@@ -172,9 +228,34 @@ y = random_range(75,400);
 if(life &lt;=0)
 {
 instance_destroy();
+audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_boss_death</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

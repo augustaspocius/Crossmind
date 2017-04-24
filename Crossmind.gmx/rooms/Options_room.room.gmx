@@ -53,13 +53,12 @@ instance_deactivate_object(obj_player);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="OB_SoundsButton" x="256" y="160" name="inst_7AA64100" locked="0" code="" scaleX="1.46043169498444" scaleY="1.88888883590698" colour="4294967295" rotation="0"/>
-    <instance objName="obj_CheckboxSound" x="544" y="192" name="inst_01B315C7" locked="0" code="" scaleX="1.11538457870483" scaleY="1.29268288612366" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Controls" x="352" y="416" name="inst_15914CF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_BackMainMenu" x="512" y="480" name="inst_9A93325F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="OB_SoundsButton" x="256" y="128" name="inst_7AA64100" locked="0" code="" scaleX="1.60000002384186" scaleY="2.66666674613953" colour="4294967295" rotation="0"/>
+    <instance objName="obj_CheckboxSound" x="640" y="192" name="inst_01B315C7" locked="0" code="" scaleX="1.11538457870483" scaleY="1.29268288612366" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Controls" x="512" y="352" name="inst_15914CF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_BackMainMenu" x="512" y="448" name="inst_9A93325F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Coursor" x="32" y="96" name="inst_624BA8DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fullscreen" x="224" y="256" name="inst_05A42BE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_options_fullscreen" x="512" y="256" name="inst_54862B00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fullscreen" x="640" y="288" name="inst_BB0C9E36" locked="0" code="" scaleX="1.11538457870483" scaleY="1.29268288612366" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
