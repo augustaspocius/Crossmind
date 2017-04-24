@@ -28,7 +28,7 @@
       <sprite>sprites\spr_player_walking_up</sprite>
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
-      <sprite>sprites\empty</sprite>
+      <sprite>sprites\spr_powerup</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
@@ -105,6 +105,7 @@
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
+      <object>objects\obj_player_generavimo</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet_creations</object>
     </objects>
@@ -113,6 +114,7 @@
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
+      <object>objects\obj_enemy_boss_following</object>
       <object>objects\obj_enemy_boss_fireball</object>
       <object>objects\obj_enemy_attack</object>
     </objects>
@@ -186,9 +188,11 @@
     <objects name="Powerups">
       <object>objects\obj_longer_shots</object>
       <object>objects\obj_faster_shots</object>
+      <object>objects\obj_multi_shot</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_generate</room>
     <rooms name="Intro">
       <room>rooms\rm_intro</room>
       <room>rooms\rm_intro2</room>
@@ -211,7 +215,6 @@
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
     </rooms>
-    <room>rooms\rm_generate</room>
   </rooms>
   <constants number="5">
     <constant name="CELL_WIDTH">64</constant>

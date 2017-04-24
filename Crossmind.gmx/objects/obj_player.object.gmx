@@ -3,8 +3,8 @@
   <spriteName>spr_player_idle</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-9</depth>
-  <persistent>0</persistent>
+  <depth>-99999</depth>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>spr_player_idle</maskName>
   <events>
@@ -19,7 +19,7 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -28,17 +28,18 @@
             <string>hsp = 0;
 vsp = 0;
 spd= 10;
+btimer = 0;
 image_speed = 0.25;
 lives = 5;
 key_on = c_white;
-btimer = 0;
+steps = 0;
+score = 120;
 steps = 0;
 invincability = 0;
-score = 120;
 ShotDirection = 0; //Random element for shooting
-BulletsCreated = 1; //NumberOfBulletsShot
 BulletsSpeed = 0; //Increased bullet speed
 BulletsTime = 0; //Increased bullet time
+BulletsCreated = 1; //NumberOfBulletsShot
 </string>
           </argument>
         </arguments>
@@ -121,105 +122,68 @@ score -=1;
 invincability--;
 if(score &lt;= 0)
 {
-    if(room != DeathRoom)
-    {
-        game_restart();
-    }
+if(room != DeathRoom)
+{
+game_restart();
+}
 }
 if(lives &lt;= 0)
 {
-    instance_destroy();
-    audio_pause_sound(snd_footstep);
-    audio_play_sound(snd_player_death, 2, false);
-    room_goto(DeathRoom);
+instance_destroy();
+audio_pause_sound(snd_footstep);
+audio_play_sound(snd_player_death, 2, false);
+room_goto(DeathRoom);
 }
-
 //Move Player
-
-
 if(hsp == 0 &amp;&amp; vsp == 0)
 {
-     sprite_index = spr_player_idle;
-     audio_pause_sound(snd_footstep);
+ sprite_index = spr_player_idle;
+ audio_pause_sound(snd_footstep);
 }
-if(MOVERIGHT){
-    image_xscale = 1;
-    sprite_index = spr_player_walking;
-    hsp += 0.55
-    alarm[1] = 10;
-    if !audio_is_playing(snd_footstep)
-        audio_play_sound(snd_footstep, 1, false);
-        // Horizontal collisions
-            if (grid_place_meeting(x+hsp, y)) {
-
-        while (!grid_place_meeting(x+sign(hsp), y)) 
-        {
-            x+=sign(hsp);
-        }
-        hsp = 0;
-    }
-
+if(MOVERIGHT){image_xscale = 1;
+sprite_index = spr_player_walking;
+hsp += 0.55
+alarm[1] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
 }
-if(MOVELEFT){
-        image_xscale = -1;
-    sprite_index = spr_player_walking;
-    hsp -= 0.55
-    alarm[1] = 10;
-    if !audio_is_playing(snd_footstep)
-        audio_play_sound(snd_footstep, 1, false);   
-        // Horizontal collisions
-        if (grid_place_meeting(x+hsp, y)) {
-
-    while (!grid_place_meeting(x+sign(hsp), y)) {
-        x+=sign(hsp);
-    }
-    hsp = 0;
-}
-
+if(MOVELEFT){image_xscale = -1;
+sprite_index = spr_player_walking;
+hsp -= 0.55
+alarm[1] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
 }
 if(MOVEUP){
-    sprite_index = spr_player_walking_up;
-    vsp -= 0.55
-    alarm[0] = 10;
-    if !audio_is_playing(snd_footstep)
-        audio_play_sound(snd_footstep, 1, false);
-        
-    if (grid_place_meeting(x, y+vsp)) {
-    while (!grid_place_meeting(x,y+sign(vsp))) {
-        y+=sign(vsp);
-    }
-    vsp = 0;
-}
+sprite_index = spr_player_walking_up;
+vsp -= 0.55
+alarm[0] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
 }
 if(MOVEDOWN){
-    sprite_index = spr_player_walking_down;
-    vsp += 0.55
-    alarm[0] = 10;
-    if !audio_is_playing(snd_footstep)
-        audio_play_sound(snd_footstep, 1, false);
-if (grid_place_meeting(x, y+vsp)) {
-    while (!grid_place_meeting(x,y+sign(vsp))) {
-        y+=sign(vsp);
-    }
-    vsp = 0;
-}
+sprite_index = spr_player_walking_down;
+vsp += 0.55
+alarm[0] = 10;
+if !audio_is_playing(snd_footstep)
+    audio_play_sound(snd_footstep, 1, false);
 }
 
 if (vsp &gt; 8)
 {
-    vsp = 8;
+vsp = 8;
 }
 if (vsp &lt; -8)
 {
-    vsp = -8;
+vsp = -8;
 }
 if (hsp &gt; 8)
 {
-    hsp = 8;
+hsp = 8;
 }
 if (hsp &lt; -8)
 {
-    hsp = -8;
+hsp = -8;
 }
 
 if(hsp != 0 || vsp != 0) &amp;&amp; (audio_is_paused(snd_footstep)){
@@ -231,8 +195,6 @@ if(hsp != 0 || vsp != 0) &amp;&amp; (audio_is_paused(snd_footstep)){
 scr_push();
 //Move the object
 scr_move(hsp ,vsp);
-
-
 
 </string>
           </argument>
@@ -411,11 +373,13 @@ invincability = 64;
 //Shooting
         if(btimer &lt; 0){
         btimer = room_speed * 0.5;  
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
+        {
+        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 270 + ShotDirection;
-        bullet.speed = 15;
-        bullet.direction = 270;
         if(MOVEUP)
         {
         bullet.speed = 10 + BulletsSpeed;
@@ -426,13 +390,15 @@ invincability = 64;
         }
         if(MOVELEFT)
         {
-        bullet.direction = 290;
+        bullet.direction = 290 + ShotDirection;
         }
         if(MOVERIGHT)
         {
-        bullet.direction = 250;
+        bullet.direction = 250 + ShotDirection;
+        }
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -460,18 +426,20 @@ invincability = 64;
         if(btimer &lt; 0){
         
         btimer = room_speed * 0.5;  
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
+        {
+        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 0 + ShotDirection;
-        bullet.speed = 15;
-        bullet.direction = 0;
         if(MOVEUP)
         {
-        bullet.direction = 340;
+        bullet.direction = 340 + ShotDirection;
         }
         if(MOVEDOWN)
         {
-        bullet.direction = 20;
+        bullet.direction = 20 + ShotDirection;
         }
         if(MOVELEFT)
         {
@@ -481,7 +449,9 @@ invincability = 64;
         {
         bullet.speed = 20 + BulletsSpeed;
         }
+        }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -508,11 +478,13 @@ invincability = 64;
 if(btimer &lt; 0)
 {
         btimer = room_speed * 0.5;  
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
+        {
+        ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 90 + ShotDirection;
-        bullet.speed = 15;
-        bullet.direction = 90;
         if(MOVEUP)
         {
         bullet.speed = 20 + BulletsSpeed;
@@ -523,13 +495,15 @@ if(btimer &lt; 0)
         }
         if(MOVELEFT)
         {
-        bullet.direction = 70;
+        bullet.direction = 70 + ShotDirection;
         }
         if(MOVERIGHT)
         {
-        bullet.direction = 110;
+        bullet.direction = 110 + ShotDirection;
+        }
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -552,16 +526,14 @@ if(btimer &lt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = -1
+            <string>
+image_xscale = -1
 //Shooting
 if(btimer &lt; 0)
-{
-        
+{    
         btimer = room_speed * 0.5; 
-        bullet = instance_create(x,y,obj_bullet);
-        bullet.speed = 15;
-        bullet.direction = 180;
-        if(MOVEUP)
+        var i;
+        for(i = 0; i &lt; BulletsCreated; i++)
         {
             ShotDirection = random_range(-15 * i,15 * i); //Random element for shooting
             bullet = instance_create(x,y,obj_bullet);
@@ -582,22 +554,10 @@ if(btimer &lt; 0)
             if(MOVERIGHT)
             {
             bullet.speed = 10 + BulletsSpeed;
-        bullet.direction = 200;
-        }
-        if(MOVEDOWN)
-        {
-        bullet.direction = 160;
-        }
-        if(MOVELEFT)
-        {
-        bullet.speed = 20;
-        }
-        if(MOVERIGHT)
-        {
-        bullet.speed = 10;
         }
         }
 }
+ShotDirection = 0;
 </string>
           </argument>
         </arguments>
@@ -620,11 +580,11 @@ if(btimer &lt; 0)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>view_xview=0</string>
+            <string>0</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_xview=0</string>
+            <string>0</string>
           </argument>
           <argument>
             <kind>5</kind>
@@ -682,11 +642,11 @@ if(btimer &lt; 0)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>view_xview=825</string>
+            <string>825</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_xview=10</string>
+            <string>10</string>
           </argument>
           <argument>
             <kind>1</kind>

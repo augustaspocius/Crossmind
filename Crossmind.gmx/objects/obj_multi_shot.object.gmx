@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>if(place_meeting(x, y, obj_player)){
-obj_player.BulletsTime += 4;
+obj_player.BulletsCreated ++;
 instance_destroy();
 }
 </string>
