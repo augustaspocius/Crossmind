@@ -51,7 +51,7 @@ var cx = width div 2;
 var cy = height div 2; 
 
 //Create player
-    instance_create(cx*CELL_WIDTH+CELL_WIDTH/2,cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_player);
+    instance_create(cx*CELL_WIDTH+CELL_WIDTH/2,cy*CELL_HEIGHT+CELL_HEIGHT/2, obj_player_generavimo);
 //Controller Direction in the center of the grid
 var cdir = irandom(3);
 
