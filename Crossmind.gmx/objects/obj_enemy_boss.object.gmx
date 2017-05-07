@@ -50,7 +50,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>-100</sound>
+            <sound>snd_Evilcackle</sound>
           </argument>
           <argument>
             <kind>3</kind>
