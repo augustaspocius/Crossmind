@@ -125,6 +125,8 @@
       <object>objects\obj_enemy_boss_following</object>
       <object>objects\obj_enemy_boss_fireball</object>
       <object>objects\obj_enemy_attack</object>
+      <object>objects\obj_enemy_boss_fireball_2</object>
+      <object>objects\obj_enemy_boss_2</object>
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_door_lock</object>
