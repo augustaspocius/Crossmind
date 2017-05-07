@@ -113,8 +113,6 @@
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
-      <object>objects\obj_enemy_boss_2</object>
-      <object>objects\obj_enemy_boss_fireball_2</object>
       <object>objects\obj_enemy_boss_following</object>
       <object>objects\obj_enemy_boss_fireball</object>
       <object>objects\obj_enemy_attack</object>
