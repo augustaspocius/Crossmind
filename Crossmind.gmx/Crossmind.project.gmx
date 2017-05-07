@@ -122,7 +122,6 @@
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
-      <object>objects\obj_enemy_boss_following</object>
       <object>objects\obj_enemy_boss_fireball</object>
       <object>objects\obj_enemy_attack</object>
       <object>objects\obj_enemy_boss_fireball_2</object>
@@ -218,6 +217,7 @@
       <room>rooms\rm_right</room>
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
+      <room>rooms\rm_SecondBoss</room>
     </rooms>
   </rooms>
   <constants number="5">
