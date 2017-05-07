@@ -105,7 +105,6 @@
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
-      <object>objects\obj_player_generavimo</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet_creations</object>
     </objects>
@@ -176,15 +175,6 @@
       <object>objects\obj_intro_skip</object>
       <object>objects\obj_intro_skip2</object>
     </objects>
-    <objects name="Generavimo">
-      <object>objects\obj_room</object>
-      <object>objects\obj_top_doors</object>
-      <object>objects\obj_bot_doors</object>
-      <object>objects\obj_right_door</object>
-      <object>objects\obj_left_door</object>
-      <object>objects\obj_generate_rooms</object>
-      <object>objects\obj_level</object>
-    </objects>
     <objects name="Powerups">
       <object>objects\obj_longer_shots</object>
       <object>objects\obj_faster_shots</object>
@@ -192,7 +182,6 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_generate</room>
     <rooms name="Intro">
       <room>rooms\rm_intro</room>
       <room>rooms\rm_intro2</room>
