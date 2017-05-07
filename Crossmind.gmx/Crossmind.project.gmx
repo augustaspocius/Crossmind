@@ -46,6 +46,9 @@
       <sprite>sprites\spr_checkpoint</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_corner</sprite>
+      <sprite>sprites\spr_trap</sprite>
+      <sprite>sprites\spr_trap2</sprite>
+      <sprite>sprites\spr_chest</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -97,7 +100,13 @@
     <script>scripts\mouse_hover_script.gml</script>
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_push.gml</script>
-    <script>scripts\grid_place_meeting.gml</script>
+    <scripts name="Inventory">
+      <script>scripts\inv_init.gml</script>
+      <script>scripts\inv_add.gml</script>
+      <script>scripts\inv_remove.gml</script>
+      <script>scripts\inv_data_items.gml</script>
+      <script>scripts\inv_show.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -128,6 +137,9 @@
       <object>objects\obj_key</object>
       <object>objects\obj_lock</object>
       <object>objects\obj_checkpoint</object>
+      <object>objects\obj_trap_spawn_enemy</object>
+      <object>objects\obj_trap_spawn_boss</object>
+      <object>objects\obj_chest</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -196,12 +208,13 @@
       <room>rooms\DeathRoom</room>
       <room>rooms\rm_winRoom</room>
     </rooms>
-    <rooms name="Test">
+    <rooms name="Kambariai">
       <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
       <room>rooms\rm_down</room>
       <room>rooms\rm_left</room>
       <room>rooms\rm_boss</room>
+      <room>rooms\rm_trap</room>
       <room>rooms\rm_right</room>
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
