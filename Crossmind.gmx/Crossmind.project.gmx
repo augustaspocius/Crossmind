@@ -18,6 +18,7 @@
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
     <sound>sound\snd_music</sound>
+    <sound>sound\snd_music2</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -74,20 +75,33 @@
         <sprite>sprites\sp_congratz</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_room</sprite>
+    <sprite>sprites\spr_door_left</sprite>
+    <sprite>sprites\spr_bot_door</sprite>
+    <sprite>sprites\spr_right_door</sprite>
+    <sprite>sprites\spr_top_door</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Bg_menu</background>
+    <background>background\Bg_intro1</background>
+    <background>background\Bg_intro2</background>
     <background>background\Bg_PauseMEnuBG</background>
     <background>background\bg_Deathscreen</background>
     <background>background\Bg_gamePlayBackground</background>
     <background>background\bg_winScreen</background>
+    <background>background\bg_floor</background>
+    <background>background\bg_wall</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\mouse_hover_script.gml</script>
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_push.gml</script>
+    <script>scripts\grid_place_meeting.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_player</object>
@@ -99,6 +113,9 @@
       <object>objects\obj_enemy_stationary</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
+      <object>objects\obj_enemy_boss_2</object>
+      <object>objects\obj_enemy_boss_fireball_2</object>
+      <object>objects\obj_enemy_boss_following</object>
       <object>objects\obj_enemy_boss_fireball</object>
       <object>objects\obj_enemy_attack</object>
     </objects>
@@ -154,13 +171,23 @@
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
     </objects>
+    <objects name="Intro">
+      <object>objects\obj_intro</object>
+      <object>objects\obj_intro2</object>
+      <object>objects\obj_intro_skip</object>
+      <object>objects\obj_intro_skip2</object>
+    </objects>
     <objects name="Powerups">
-      <object>objects\obj_multi_shot</object>
       <object>objects\obj_longer_shots</object>
       <object>objects\obj_faster_shots</object>
+      <object>objects\obj_multi_shot</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <rooms name="Intro">
+      <room>rooms\rm_intro</room>
+      <room>rooms\rm_intro2</room>
+    </rooms>
     <rooms name="Menu">
       <room>rooms\theFirstRoom</room>
       <room>rooms\Main_Menu</room>
@@ -180,6 +207,13 @@
       <room>rooms\rm_start</room>
     </rooms>
   </rooms>
+  <constants number="5">
+    <constant name="CELL_WIDTH">64</constant>
+    <constant name="CELL_HEIGHT">64</constant>
+    <constant name="WALL">-5</constant>
+    <constant name="FLOOR">-6</constant>
+    <constant name="VOID">-7</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
