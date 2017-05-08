@@ -77,6 +77,8 @@
       <sprites name="Winscreen">
         <sprite>sprites\sp_congratz</sprite>
       </sprites>
+      <sprite>sprites\sp_chooseControll</sprite>
+      <sprite>sprites\sp_keyController</sprite>
     </sprites>
     <sprite>sprites\spr_room</sprite>
     <sprite>sprites\spr_door_left</sprite>
@@ -168,6 +170,7 @@
           <object>objects\obj_ExitPauseMenu</object>
         </objects>
         <object>objects\obj_SaveButton</object>
+        <object>objects\obj_buttonBack</object>
       </objects>
       <object>objects\cont_main</object>
       <object>objects\Obj_PauseMenuController</object>
@@ -192,6 +195,13 @@
       <object>objects\obj_longer_shots</object>
       <object>objects\obj_faster_shots</object>
       <object>objects\obj_multi_shot</object>
+    </objects>
+    <objects name="controls">
+      <object>objects\obj_chooseMoveDown</object>
+      <object>objects\obj_chooseMoveRight</object>
+      <object>objects\obj_chooseMoveLeft</object>
+      <object>objects\obj_chooseMoveUp</object>
+      <object>objects\obj_keyController</object>
     </objects>
   </objects>
   <rooms name="rooms">
