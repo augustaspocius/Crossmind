@@ -10,7 +10,12 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>ini_open("settings.ini");
+obj_chooseMoveUp.key = ini_read_real("controls", "up", keyboard_get_map("W"));
+obj_chooseMoveDown.key = ini_read_real("controls", "down",  keyboard_get_map("S"));
+obj_chooseMoveLeft.key = ini_read_real("controls", "left",  keyboard_get_map("A"));
+obj_chooseMoveRight.key = ini_read_real("controls", "right",  keyboard_get_map("D"));
+ini_close();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -51,7 +56,11 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_BackOptions" x="512" y="448" name="inst_DD731AC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chooseMoveLeft" x="128" y="320" name="inst_7D2ACE47" locked="0" code="" scaleX="0.849462389945984" scaleY="0.921052634716034" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chooseMoveRight" x="320" y="320" name="inst_40D579BD" locked="0" code="" scaleX="0.849462389945984" scaleY="0.921052634716034" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chooseMoveUp" x="224" y="224" name="inst_750A1658" locked="0" code="" scaleX="0.849462389945984" scaleY="0.921052634716034" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chooseMoveDown" x="224" y="320" name="inst_4450A7CA" locked="0" code="" scaleX="0.849462389945984" scaleY="0.921052634716034" colour="4294967295" rotation="0"/>
+    <instance objName="obj_buttonBack" x="480" y="448" name="inst_B5B8882E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
