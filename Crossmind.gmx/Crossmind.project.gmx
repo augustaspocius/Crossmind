@@ -62,12 +62,12 @@
       <sprite>sprites\player01</sprite>
       <sprite>sprites\SP_Checkbox</sprite>
       <sprite>sprites\Sp_Controls</sprite>
-      <sprite>sprites\Sp_ControlsTitle</sprite>
       <sprite>sprites\SP_PauseContinue</sprite>
       <sprite>sprites\SP_PauseExit</sprite>
       <sprite>sprites\SP_PauseMainMenu</sprite>
       <sprite>sprites\SP_PauseOptions</sprite>
       <sprite>sprites\SP_Sounds</sprite>
+      <sprite>sprites\sp_fullscreen</sprite>
       <sprite>sprites\sp_Save</sprite>
       <sprites name="DeathScreen">
         <sprite>sprites\sp_deathTitle</sprite>
@@ -147,6 +147,7 @@
     </objects>
     <objects name="Menu">
       <object>objects\OB_SoundsButton</object>
+      <object>objects\obj_fullscreen_title</object>
       <object>objects\player01_ObjMenu</object>
       <object>objects\Player_ObjMenu</object>
       <object>objects\obj_Coursor</object>
@@ -156,6 +157,7 @@
       </objects>
       <objects name="buttons">
         <object>objects\obj_CheckboxSound</object>
+        <object>objects\obj_fullscreen</object>
         <object>objects\obj_Continue</object>
         <object>objects\obj_NewGame</object>
         <object>objects\obj_Exit</object>
