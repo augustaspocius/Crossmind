@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life = 5;
+            <string>life = 100;
 shooting = 64;
 attack = 140;
 image_speed = 0;
@@ -177,12 +177,11 @@ mp_potential_step(obj_player.x, obj_player.y,2,true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life --;
+            <string>life -= 20;
 x = random_range(75,800);
 y = random_range(75,400);
 if(life &lt;=0)
 {
-global.score += 10;
 instance_destroy();
 audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);
@@ -223,12 +222,11 @@ room_goto(rm_winRoom);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life --;
+            <string>life -= 20;
 x = random_range(75,800);
 y = random_range(75,400);
 if(life &lt;=0)
 {
-global.score += 10;
 instance_destroy();
 audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);
@@ -258,6 +256,30 @@ room_goto(rm_winRoom);
           <argument>
             <kind>3</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+draw_healthbar(x-30,y-50,x+30,y-41,life,c_black,c_red,c_green,0,true,false);
+</string>
           </argument>
         </arguments>
       </action>

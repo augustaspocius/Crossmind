@@ -52,7 +52,6 @@
             <string>lifeTime --;
 if(lifeTime &lt;= 0)
 {
-global.score+=5;
 instance_destroy();
 }
 </string>
