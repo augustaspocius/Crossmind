@@ -277,6 +277,7 @@ invincability = 20;
 
 if(life &lt;=0)
 {
+global.score+=100;
 instance_destroy();
 audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);
@@ -326,6 +327,7 @@ invincability = 20;
 
 if(life &lt;=0)
 {
+global.score+=100;
 instance_destroy();
 audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);

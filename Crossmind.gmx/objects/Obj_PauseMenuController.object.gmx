@@ -35,12 +35,25 @@ instance_deactivate_all(true);
 instance_activate_object(obj_Coursor);
 
 instance_create(room_width/2, room_height/5, obj_ContinuePuaseMenu);
-instance_create(room_width/2, room_height/2.44, obj_MainMenuPauseMenu);
-instance_create(room_width/2, room_height - room_height/2.44, obj_OptionsPauseMenu);
+instance_create(room_width/2, room_height/5 - (room_height/5 - room_height/2)/2, obj_MainMenuPauseMenu);
+instance_create(room_width/2, room_height/2, obj_SaveButton);
+instance_create(room_width/2, room_height - room_height/5 + (room_height/5 - room_height/2)/2, obj_OptionsPauseMenu);
 instance_create(room_width/2, room_height - room_height/5, obj_ExitPauseMenu);
 
+var obj1 = instance_create(room_width/4, obj_ContinuePuaseMenu.y, obj_selectPauseMenu); 
 
+with(obj1)
+{
+ image_xscale = 0.5;
+ image_yscale = 0.5;
+}
+var obj = instance_create(room_width - room_width/4, obj_ContinuePuaseMenu.y, obj_selectPauseMenu);
 
+with(obj){
+image_angle += 180;
+ image_xscale = 0.5;
+ image_yscale = 0.5;
+}
 
 
 </string>
@@ -84,6 +97,13 @@ instance_destroy()
 }
 with(obj_ExitPauseMenu){
 instance_destroy()
+}
+with(obj_SaveButton){
+instance_destroy()
+}
+with(obj_selectPauseMenu)
+{
+instance_destroy();
 }
 
 //background_index[0] = true;
@@ -167,6 +187,28 @@ if(file_exists("SavedGame")){
 file_delete("SavedGame");
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

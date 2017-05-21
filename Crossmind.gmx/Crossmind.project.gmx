@@ -83,6 +83,7 @@
       </sprites>
       <sprite>sprites\sp_chooseControll</sprite>
       <sprite>sprites\sp_keyController</sprite>
+      <sprite>sprites\sp_select</sprite>
     </sprites>
     <sprite>sprites\spr_room</sprite>
     <sprite>sprites\spr_door_left</sprite>
@@ -117,6 +118,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
+    <font>fonts\font1</font>
   </fonts>
   <objects name="objects">
     <objects name="Characters">
@@ -176,22 +178,29 @@
           <object>objects\obj_MainMenuPauseMenu</object>
           <object>objects\obj_OptionsPauseMenu</object>
           <object>objects\obj_ExitPauseMenu</object>
+          <object>objects\obj_SaveButton</object>
         </objects>
-        <object>objects\obj_SaveButton</object>
         <object>objects\obj_buttonBack</object>
       </objects>
-      <object>objects\cont_main</object>
-      <object>objects\Obj_PauseMenuController</object>
-      <object>objects\test</object>
-      <object>objects\OBJ_RoomController</object>
+      <objects name="controls">
+        <object>objects\OBJ_RoomController</object>
+        <object>objects\Obj_PauseMenuController</object>
+        <object>objects\obj_save</object>
+        <object>objects\test</object>
+        <object>objects\obj_mainMenuController</object>
+      </objects>
+      <object>objects\obj_select</object>
+      <object>objects\obj_selectPauseMenu</object>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
       <object>objects\obj_Score</object>
       <object>objects\obj_goToDeathScreen</object>
+      <object>objects\obj_deathScreenController</object>
     </objects>
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
+      <object>objects\obj_winScreenController</object>
     </objects>
     <objects name="Intro">
       <object>objects\obj_intro</object>
