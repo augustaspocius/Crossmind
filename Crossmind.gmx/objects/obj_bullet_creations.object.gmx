@@ -259,20 +259,6 @@ instance_destroy();
       </action>
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -287,7 +273,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>score += 5;
+            <string>other.life -= 40;
+score += 5;
 </string>
           </argument>
         </arguments>

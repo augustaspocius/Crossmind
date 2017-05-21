@@ -46,6 +46,9 @@
       <sprite>sprites\spr_checkpoint</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_corner</sprite>
+      <sprite>sprites\spr_trap</sprite>
+      <sprite>sprites\spr_trap2</sprite>
+      <sprite>sprites\spr_chest</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -74,6 +77,8 @@
       <sprites name="Winscreen">
         <sprite>sprites\sp_congratz</sprite>
       </sprites>
+      <sprite>sprites\sp_chooseControll</sprite>
+      <sprite>sprites\sp_keyController</sprite>
     </sprites>
     <sprite>sprites\spr_room</sprite>
     <sprite>sprites\spr_door_left</sprite>
@@ -97,7 +102,13 @@
     <script>scripts\mouse_hover_script.gml</script>
     <script>scripts\scr_move.gml</script>
     <script>scripts\scr_push.gml</script>
-    <script>scripts\grid_place_meeting.gml</script>
+    <scripts name="Inventory">
+      <script>scripts\inv_init.gml</script>
+      <script>scripts\inv_add.gml</script>
+      <script>scripts\inv_remove.gml</script>
+      <script>scripts\inv_data_items.gml</script>
+      <script>scripts\inv_show.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -111,9 +122,9 @@
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
+      <object>objects\obj_enemy_stationary_targeting</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
-      <object>objects\obj_enemy_boss_following</object>
       <object>objects\obj_enemy_boss_fireball</object>
       <object>objects\obj_enemy_attack</object>
       <object>objects\obj_enemy_boss_fireball_2</object>
@@ -128,6 +139,9 @@
       <object>objects\obj_key</object>
       <object>objects\obj_lock</object>
       <object>objects\obj_checkpoint</object>
+      <object>objects\obj_trap_spawn_enemy</object>
+      <object>objects\obj_trap_spawn_boss</object>
+      <object>objects\obj_chest</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -157,6 +171,7 @@
           <object>objects\obj_ExitPauseMenu</object>
         </objects>
         <object>objects\obj_SaveButton</object>
+        <object>objects\obj_buttonBack</object>
       </objects>
       <object>objects\cont_main</object>
       <object>objects\Obj_PauseMenuController</object>
@@ -182,6 +197,13 @@
       <object>objects\obj_faster_shots</object>
       <object>objects\obj_multi_shot</object>
     </objects>
+    <objects name="controls">
+      <object>objects\obj_chooseMoveDown</object>
+      <object>objects\obj_chooseMoveRight</object>
+      <object>objects\obj_chooseMoveLeft</object>
+      <object>objects\obj_chooseMoveUp</object>
+      <object>objects\obj_keyController</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="Intro">
@@ -196,15 +218,22 @@
       <room>rooms\DeathRoom</room>
       <room>rooms\rm_winRoom</room>
     </rooms>
-    <rooms name="Test">
+    <rooms name="Kambariai">
       <room>rooms\rm_collision_test</room>
       <room>rooms\rm_door_test</room>
       <room>rooms\rm_down</room>
       <room>rooms\rm_left</room>
       <room>rooms\rm_boss</room>
+      <room>rooms\rm_trap</room>
       <room>rooms\rm_right</room>
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
+      <room>rooms\rm_SecondBoss</room>
+    </rooms>
+    <rooms name="TestRooms">
+      <room>rooms\rm_Pavizdinis</room>
+      <room>rooms\rm_left_to_objective</room>
+      <room>rooms\rm_Objective_room</room>
     </rooms>
   </rooms>
   <constants number="5">

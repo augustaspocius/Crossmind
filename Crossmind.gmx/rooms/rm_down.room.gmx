@@ -216,6 +216,7 @@
     <instance objName="obj_wall" x="0" y="256" name="inst_52F3FBF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_wall" x="960" y="224" name="inst_2D99A10A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_wall" x="960" y="256" name="inst_D07C8D9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="obj_enemy_stationary_targeting" x="224" y="256" name="inst_96779B55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
