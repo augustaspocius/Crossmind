@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.masterVolume=1;
-image_speed = 0;
+            <string>image_speed = 0;
 checked = false;
 image_index = 1;
 
@@ -57,17 +56,17 @@ image_index = 1;
 checked = !checked;
 if checked
 {
-
-global.masterVolume = 0;
-audio_master_gain(0);
+window_set_fullscreen(true);
+global.fullScreenSet = true;
 
 }
 else 
 {
-global.masterVolume = 1;
-audio_master_gain(1);
-
+window_set_fullscreen(false);
+global.fullScreenSet = false;
 }
+
+
 </string>
           </argument>
         </arguments>
