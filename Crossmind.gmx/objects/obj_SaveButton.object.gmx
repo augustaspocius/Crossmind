@@ -93,6 +93,7 @@
             <kind>1</kind>
             <string>
 global.gameSaved =true;
+
 audio_play_sound(snd_save, 0, false);
 image_index = 1;
 </string>

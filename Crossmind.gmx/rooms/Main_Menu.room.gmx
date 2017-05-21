@@ -13,11 +13,17 @@
   <code>global.fromPause = false;
 global.exitgame = false;
 global.pauseMenuOptions=false;
+instance_create(room_width/2, 192, obj_Continue);
 if(global.gameSaved)
 {
+   
     instance_activate_object(obj_Continue);
 }
-else instance_deactivate_object(obj_Continue);
+else{
+
+ instance_deactivate_object(obj_Continue);
+ 
+}
 instance_deactivate_object(OBJ_RoomController);
 instance_deactivate_object(Obj_PauseMenuController);
 instance_deactivate_object(obj_player);</code>
@@ -63,10 +69,12 @@ instance_deactivate_object(obj_player);</code>
   <instances>
     <instance objName="obj_Coursor" x="64" y="64" name="inst_300B7D6A" locked="-1" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player01_ObjMenu" x="608" y="32" name="inst_72062C40" locked="0" code="" scaleX="0.717314481735229" scaleY="0.666666686534882" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Continue" x="480" y="192" name="inst_EF3FAE4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_NewGame" x="480" y="288" name="inst_0E0BABB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Exit" x="480" y="480" name="inst_6A780B0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_OptionsButton" x="480" y="384" name="inst_29EFCB4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mainMenuController" x="128" y="256" name="inst_416680AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_select" x="256" y="192" name="inst_29EE72D9" locked="0" code="x = room_width/4;&#xA;" scaleX="0.50537633895874" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_select" x="704" y="192" name="inst_3E9A39F5" locked="0" code="image_angle +=180;&#xA;x = room_width - room_width/4;" scaleX="0.50537633895874" scaleY="0.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
