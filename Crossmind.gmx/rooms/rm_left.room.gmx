@@ -151,23 +151,15 @@
     <instance objName="obj_wall" x="352" y="96" name="inst_3C1525DD" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_corner" x="224" y="160" name="inst_21EF143E" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="90"/>
     <instance objName="obj_corner" x="640" y="96" name="inst_87A66AA7" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="672" y="448" name="inst_514886D4" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="768" y="224" name="inst_A4BD8F05" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="448" y="256" name="inst_C4902F86" locked="0" code="" scaleX="2.28571438789368" scaleY="2.28571438789368" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="768" y="448" name="inst_DB7E7D99" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="768" y="160" name="inst_D299F507" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="768" y="352" name="inst_F0E1655B" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="576" y="448" name="inst_60C15842" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="480" y="448" name="inst_AF8C2AC9" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="384" y="448" name="inst_CF0149EF" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="288" y="448" name="inst_C42E8CC6" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="192" y="448" name="inst_146BBED7" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="96" y="448" name="inst_A9CE5548" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="96" y="352" name="inst_AD389EF6" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="96" y="256" name="inst_AF82BB63" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_fireball" x="96" y="160" name="inst_EF7D95E1" locked="0" code="" scaleX="2" scaleY="-2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="576" y="96" name="inst_279E25CC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="288" y="96" name="inst_0E3FF6A6" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="704" y="416" name="inst_404558F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="576" y="416" name="inst_5F082C3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="448" y="416" name="inst_0DB0998E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="320" y="416" name="inst_C2D86BA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="832" y="416" name="inst_4298D339" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="192" y="416" name="inst_ED072EF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

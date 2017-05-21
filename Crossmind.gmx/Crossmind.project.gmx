@@ -18,7 +18,8 @@
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
     <sound>sound\snd_music</sound>
-    <sound>sound\snd_music2</sound>
+    <sound>sound\snd_ingame_music</sound>
+    <sound>sound\snd_fire</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -29,6 +30,8 @@
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
       <sprite>sprites\spr_powerup</sprite>
+      <sprite>sprites\spr_powerup2</sprite>
+      <sprite>sprites\spr_powerup3</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
@@ -49,6 +52,7 @@
       <sprite>sprites\spr_trap</sprite>
       <sprite>sprites\spr_trap2</sprite>
       <sprite>sprites\spr_chest</sprite>
+      <sprite>sprites\spr_bonfire</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -109,6 +113,7 @@
       <script>scripts\inv_data_items.gml</script>
       <script>scripts\inv_show.gml</script>
     </scripts>
+    <script>scripts\scr_message.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -141,6 +146,7 @@
       <object>objects\obj_trap_spawn_enemy</object>
       <object>objects\obj_trap_spawn_boss</object>
       <object>objects\obj_chest</object>
+      <object>objects\obj_bonfire</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -197,6 +203,7 @@
       <object>objects\obj_longer_shots</object>
       <object>objects\obj_faster_shots</object>
       <object>objects\obj_multi_shot</object>
+      <object>objects\obj_message</object>
     </objects>
     <objects name="controls">
       <object>objects\obj_chooseMoveDown</object>
