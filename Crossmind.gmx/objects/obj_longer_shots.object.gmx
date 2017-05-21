@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>if(place_meeting(x, y, obj_player)){
 obj_player.BulletsTime += 4;
+arg0 = ("Incr. Shooting range");
+//script_execute(scr_message, arg0, x, y);
+
 instance_destroy();
 }
 </string>

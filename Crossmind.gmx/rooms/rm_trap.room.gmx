@@ -140,9 +140,9 @@
     <instance objName="obj_wall" x="512" y="544" name="inst_F0E8F6C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_wall" x="960" y="256" name="inst_E85E978F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_wall" x="960" y="224" name="inst_1EADF49D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_chest" x="640" y="288" name="inst_2E55481E" locked="0" code="target_x = 672;&#xA;target_y = 416;&#xA;target_r = obj_multi_shot;&#xA;" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_chest" x="448" y="288" name="inst_FF412A5C" locked="0" code="target_x = 480;&#xA;target_y = 416;&#xA;target_r = obj_faster_shots;&#xA;" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="obj_chest" x="256" y="288" name="inst_C8448320" locked="0" code="target_x = 288;&#xA;target_y = 416;&#xA;target_r = obj_longer_shots;&#xA;" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chest" x="640" y="288" name="inst_2E55481E" locked="0" code="target_x = 672;&#xA;target_y = 416;&#xA;target_r = obj_multi_shot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chest" x="448" y="288" name="inst_FF412A5C" locked="0" code="target_x = 480;&#xA;target_y = 416;&#xA;target_r = obj_faster_shots;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chest" x="256" y="288" name="inst_C8448320" locked="0" code="target_x = 288;&#xA;target_y = 416;&#xA;target_r = obj_longer_shots;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
