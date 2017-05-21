@@ -11,6 +11,7 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>global.checked = false;
+global.fullScreenSet = false;
 global.gameSaved = false;
 room_goto(Main_Menu);
 window_set_cursor(cr_none);
@@ -18,6 +19,9 @@ global.dead = false;
 global.loadNewGame = true;
 global.fullscren = false;
 global.MoveLeft = keyboard_check(ord('A'));
+global.score = 0;
+global.continueActive = false;
+global.NewGameActive = false;
 ini_open("settings.ini");
 global.key_up = ini_read_real("controls", "up", keyboard_get_map("W"));
 global.key_down = ini_read_real("controls", "down",  keyboard_get_map("S"));
@@ -63,7 +67,9 @@ ini_close();</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances/>
+  <instances>
+    <instance objName="obj_save" x="160" y="224" name="inst_C6DA0BA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+  </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

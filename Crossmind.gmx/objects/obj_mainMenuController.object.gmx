@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="10" enumb="27">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,23 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_save("SavedGame");
-
-
-screen_save_part("GameScreen.png", 0, 0, room_width, room_height);
-
-background_index[1] = background_add("fullscreen.png", false, false);
-
-background_visible[1] = true;
-with(obj_Coursor){
-instance_destroy()
-}
-instance_create(x, y, Obj_PauseMenuController);
-instance_create(0,0, obj_Coursor);
-
-
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

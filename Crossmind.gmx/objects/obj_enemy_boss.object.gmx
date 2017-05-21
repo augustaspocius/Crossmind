@@ -182,6 +182,7 @@ x = random_range(75,800);
 y = random_range(75,400);
 if(life &lt;=0)
 {
+global.score += 10;
 instance_destroy();
 audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);
@@ -227,6 +228,7 @@ x = random_range(75,800);
 y = random_range(75,400);
 if(life &lt;=0)
 {
+global.score += 10;
 instance_destroy();
 audio_pause_sound(snd_footstep);
 room_goto(rm_winRoom);
