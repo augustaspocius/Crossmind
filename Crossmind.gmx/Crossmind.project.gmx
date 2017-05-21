@@ -135,6 +135,7 @@
       <object>objects\obj_enemy_attack</object>
       <object>objects\obj_enemy_boss_fireball_2</object>
       <object>objects\obj_enemy_boss_2</object>
+      <object>objects\obj_enemy_stationary_targeting</object>
     </objects>
     <objects name="Room_objects">
       <object>objects\obj_door_lock</object>
@@ -246,6 +247,11 @@
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
       <room>rooms\rm_SecondBoss</room>
+    </rooms>
+    <rooms name="TestRooms">
+      <room>rooms\rm_left_to_objective</room>
+      <room>rooms\rm_Objective_room</room>
+      <room>rooms\rm_Pavizdinis</room>
     </rooms>
   </rooms>
   <constants number="5">
