@@ -58,7 +58,7 @@ message_length = string_length(message[message_current]); //get the number of ch
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>snd_music2</sound>
+            <sound>snd_music</sound>
           </argument>
           <argument>
             <kind>3</kind>

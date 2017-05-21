@@ -53,8 +53,9 @@
   <instances>
     <instance objName="obj_deathTitle" x="512" y="160" name="inst_A96A8A87" locked="0" code="" scaleX="0.8299999833107" scaleY="0.683673441410065" colour="4294967295" rotation="0"/>
     <instance objName="obj_BackMainMenu" x="480" y="480" name="inst_A7A543A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Score" x="192" y="192" name="inst_D7C7C017" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Score" x="288" y="224" name="inst_D7C7C017" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Coursor" x="32" y="32" name="inst_5C4D84FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deathScreenController" x="32" y="128" name="inst_FAE274B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

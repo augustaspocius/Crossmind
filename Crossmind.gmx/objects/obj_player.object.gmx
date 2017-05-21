@@ -216,6 +216,34 @@ scr_move(hsp ,vsp);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_bonfire">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (invincability &lt;=0)
+{
+lives --;
+invincability = 20;
+audio_play_sound(snd_damage, 10, false);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_lock">
       <action>
         <libid>1</libid>
@@ -273,6 +301,7 @@ scr_move(hsp ,vsp);
 {
 lives --;
 invincability = 64;
+audio_play_sound(snd_damage, 10, false);
 }
 </string>
           </argument>
@@ -300,6 +329,7 @@ invincability = 64;
 {
 lives --;
 invincability = 64;
+audio_play_sound(snd_damage, 10, false);
 }
 </string>
           </argument>
@@ -318,30 +348,6 @@ invincability = 64;
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>211</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>-100</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="5" enumb="82">
@@ -690,31 +696,6 @@ ShotDirection = 0;
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(key_on != c_white)
-{
-draw_sprite_ext(spr_key, -1, 10, 515, 1, 1, 0, key_on, 1);
-
-}
-</string>
           </argument>
         </arguments>
       </action>

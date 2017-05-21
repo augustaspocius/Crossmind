@@ -12,7 +12,9 @@
   <showcolour>-1</showcolour>
   <code>instance_deactivate_object(obj_Coursor);
 instance_create(10, 10, OBJ_RoomController);
+//room_restart();
 if(global.loadNewGame){
+
 game_save("newGame");
 global.loadNewGame = false;
 }else{
@@ -100,7 +102,7 @@ game_load("newGame");
     <instance objName="obj_door" x="512" y="0" name="inst_68A091E1" locked="0" code="target_x = 480;&#xA;target_y = 448;&#xA;target_r = rm_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
     <instance objName="obj_door" x="960" y="288" name="inst_8BF765F9" locked="0" code="target_x = 64;&#xA;target_y = 256;&#xA;target_r = rm_right;" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_door" x="448" y="544" name="inst_53018790" locked="0" code="target_x = 480;&#xA;target_y = 64;&#xA;target_r = rm_down;" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_player" x="480" y="288" name="inst_D542D78F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="512" y="288" name="inst_D542D78F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="OBJ_RoomController" x="32" y="96" name="inst_97FB9F9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="test" x="64" y="448" name="inst_1A103F76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_corner" x="32" y="544" name="inst_48FA91B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>

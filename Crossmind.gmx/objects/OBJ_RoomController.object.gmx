@@ -26,9 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>game_save("SavedGame");
-screen_save("GameScreen.png");
 
-background_index[1] = background_add("GameScreen.png", false, false);
+
+screen_save_part("GameScreen.png", 0, 0, room_width, room_height);
+
+background_index[1] = background_add("fullscreen.png", false, false);
 
 background_visible[1] = true;
 with(obj_Coursor){

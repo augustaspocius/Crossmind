@@ -18,7 +18,8 @@
     <sound>sound\snd_unlock</sound>
     <sound>sound\snd_player_death</sound>
     <sound>sound\snd_music</sound>
-    <sound>sound\snd_music2</sound>
+    <sound>sound\snd_ingame_music</sound>
+    <sound>sound\snd_fire</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -29,6 +30,8 @@
       <sprite>sprites\spr_player_lives</sprite>
       <sprite>sprites\spr_player_walking_down</sprite>
       <sprite>sprites\spr_powerup</sprite>
+      <sprite>sprites\spr_powerup2</sprite>
+      <sprite>sprites\spr_powerup3</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemy</sprite>
@@ -49,6 +52,7 @@
       <sprite>sprites\spr_trap</sprite>
       <sprite>sprites\spr_trap2</sprite>
       <sprite>sprites\spr_chest</sprite>
+      <sprite>sprites\spr_bonfire</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -62,12 +66,12 @@
       <sprite>sprites\player01</sprite>
       <sprite>sprites\SP_Checkbox</sprite>
       <sprite>sprites\Sp_Controls</sprite>
-      <sprite>sprites\Sp_ControlsTitle</sprite>
       <sprite>sprites\SP_PauseContinue</sprite>
       <sprite>sprites\SP_PauseExit</sprite>
       <sprite>sprites\SP_PauseMainMenu</sprite>
       <sprite>sprites\SP_PauseOptions</sprite>
       <sprite>sprites\SP_Sounds</sprite>
+      <sprite>sprites\sp_fullscreen</sprite>
       <sprite>sprites\sp_Save</sprite>
       <sprites name="DeathScreen">
         <sprite>sprites\sp_deathTitle</sprite>
@@ -79,6 +83,7 @@
       </sprites>
       <sprite>sprites\sp_chooseControll</sprite>
       <sprite>sprites\sp_keyController</sprite>
+      <sprite>sprites\sp_select</sprite>
     </sprites>
     <sprite>sprites\spr_room</sprite>
     <sprite>sprites\spr_door_left</sprite>
@@ -109,9 +114,11 @@
       <script>scripts\inv_data_items.gml</script>
       <script>scripts\inv_show.gml</script>
     </scripts>
+    <script>scripts\scr_message.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
+    <font>fonts\font1</font>
   </fonts>
   <objects name="objects">
     <objects name="Characters">
@@ -122,7 +129,6 @@
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_stationary</object>
-      <object>objects\obj_enemy_stationary_targeting</object>
       <object>objects\obj_enemy_fireball</object>
       <object>objects\obj_enemy_boss</object>
       <object>objects\obj_enemy_boss_fireball</object>
@@ -142,12 +148,14 @@
       <object>objects\obj_trap_spawn_enemy</object>
       <object>objects\obj_trap_spawn_boss</object>
       <object>objects\obj_chest</object>
+      <object>objects\obj_bonfire</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
     </objects>
     <objects name="Menu">
       <object>objects\OB_SoundsButton</object>
+      <object>objects\obj_fullscreen_title</object>
       <object>objects\player01_ObjMenu</object>
       <object>objects\Player_ObjMenu</object>
       <object>objects\obj_Coursor</object>
@@ -157,6 +165,7 @@
       </objects>
       <objects name="buttons">
         <object>objects\obj_CheckboxSound</object>
+        <object>objects\obj_fullscreen</object>
         <object>objects\obj_Continue</object>
         <object>objects\obj_NewGame</object>
         <object>objects\obj_Exit</object>
@@ -169,22 +178,29 @@
           <object>objects\obj_MainMenuPauseMenu</object>
           <object>objects\obj_OptionsPauseMenu</object>
           <object>objects\obj_ExitPauseMenu</object>
+          <object>objects\obj_SaveButton</object>
         </objects>
-        <object>objects\obj_SaveButton</object>
         <object>objects\obj_buttonBack</object>
       </objects>
-      <object>objects\cont_main</object>
-      <object>objects\Obj_PauseMenuController</object>
-      <object>objects\test</object>
-      <object>objects\OBJ_RoomController</object>
+      <objects name="controls">
+        <object>objects\OBJ_RoomController</object>
+        <object>objects\Obj_PauseMenuController</object>
+        <object>objects\obj_save</object>
+        <object>objects\test</object>
+        <object>objects\obj_mainMenuController</object>
+      </objects>
+      <object>objects\obj_select</object>
+      <object>objects\obj_selectPauseMenu</object>
     </objects>
     <objects name="DeathScreen">
       <object>objects\obj_deathTitle</object>
       <object>objects\obj_Score</object>
       <object>objects\obj_goToDeathScreen</object>
+      <object>objects\obj_deathScreenController</object>
     </objects>
     <objects name="Winscreen">
       <object>objects\obj_titleGratz</object>
+      <object>objects\obj_winScreenController</object>
     </objects>
     <objects name="Intro">
       <object>objects\obj_intro</object>
@@ -196,6 +212,7 @@
       <object>objects\obj_longer_shots</object>
       <object>objects\obj_faster_shots</object>
       <object>objects\obj_multi_shot</object>
+      <object>objects\obj_message</object>
     </objects>
     <objects name="controls">
       <object>objects\obj_chooseMoveDown</object>
@@ -229,11 +246,6 @@
       <room>rooms\rm_up</room>
       <room>rooms\rm_start</room>
       <room>rooms\rm_SecondBoss</room>
-    </rooms>
-    <rooms name="TestRooms">
-      <room>rooms\rm_Pavizdinis</room>
-      <room>rooms\rm_left_to_objective</room>
-      <room>rooms\rm_Objective_room</room>
     </rooms>
   </rooms>
   <constants number="5">
