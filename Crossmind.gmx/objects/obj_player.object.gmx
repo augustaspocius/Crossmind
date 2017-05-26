@@ -40,6 +40,8 @@ ShotDirection = 0; //Random element for shooting
 BulletsSpeed = 0; //Increased bullet speed
 BulletsTime = 0; //Increased bullet time
 BulletsCreated = 1; //NumberOfBulletsShot
+lazers = false;
+multishot = false;
 
 
 </string>
@@ -117,8 +119,6 @@ moveLeft = ini_read_real("controls", "left",  keyboard_check(ord("A")));
 moveRight = ini_read_real("controls", "right",  keyboard_check(ord("D")));
 ini_close();
 
-
-
 MOVELEFT = keyboard_check(ord(string(chr(moveLeft))));
 MOVERIGHT = keyboard_check(ord(string(chr(moveRight))));
 MOVEUP = keyboard_check(ord(string(chr(moveUp))));
@@ -138,7 +138,15 @@ if(room != DeathRoom)
 game_restart();
 }
 }
-if(lives &lt;= 0)
+if (lives &lt;= 2)
+{
+    obj_player.image_blend = c_maroon;
+}
+else
+{
+    obj_player.image_blend = c_white;
+}
+if(lives &lt;= 0 )
 {
 instance_destroy();
 audio_pause_sound(snd_footstep);
@@ -235,6 +243,7 @@ scr_move(hsp ,vsp);
             <kind>1</kind>
             <string>if (invincability &lt;=0)
 {
+obj_player.image_blend = c_red;
 lives --;
 invincability = 20;
 audio_play_sound(snd_damage, 10, false);
@@ -299,6 +308,7 @@ audio_play_sound(snd_damage, 10, false);
             <kind>1</kind>
             <string>if (invincability &lt;=0)
 {
+obj_player.image_blend = c_red;
 lives --;
 invincability = 64;
 audio_play_sound(snd_damage, 10, false);
@@ -325,8 +335,9 @@ audio_play_sound(snd_damage, 10, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (invincability &lt;=0)
+            <string>if (invincability &lt;= 0)
 {
+obj_player.image_blend = c_red;
 lives --;
 invincability = 64;
 audio_play_sound(snd_damage, 10, false);
@@ -401,6 +412,10 @@ audio_play_sound(snd_damage, 10, false);
         bullet = instance_create(x,y,obj_bullet);
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 270 + ShotDirection;
+        if (lazers = true)
+            {
+                bullet.image_blend = c_red;
+            }
         if(MOVEUP)
         {
         bullet.speed = 10 + BulletsSpeed;
@@ -452,6 +467,10 @@ ShotDirection = 0;
         {
         ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
+        if (lazers = true)
+            {
+                bullet.image_blend = c_red;
+            }
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 0 + ShotDirection;
         if(MOVEUP)
@@ -504,6 +523,10 @@ if(btimer &lt; 0)
         {
         ShotDirection = random_range(-15*i,15*i); //Random element for shooting
         bullet = instance_create(x,y,obj_bullet);
+        if (lazers = true)
+            {
+                bullet.image_blend = c_red;
+            }
         bullet.speed = 15 + BulletsSpeed;
         bullet.direction = 90 + ShotDirection;
         if(MOVEUP)
@@ -558,6 +581,10 @@ if(btimer &lt; 0)
         {
             ShotDirection = random_range(-15 * i,15 * i); //Random element for shooting
             bullet = instance_create(x,y,obj_bullet);
+            if (lazers = true)
+            {
+                bullet.image_blend = c_red;
+            }
             bullet.speed = 15 + BulletsSpeed;
             bullet.direction = 180 + ShotDirection;
             if(MOVEUP)

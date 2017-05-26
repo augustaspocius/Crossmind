@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>if(place_meeting(x, y, obj_player)){
+multishot = true;
 obj_player.BulletsCreated ++;
-arg0 = ("Mutli shooting");
+arg0 = ("Multi shooting");
 //script_execute(scr_message, arg0, x, y);
 instance_destroy();
 }
