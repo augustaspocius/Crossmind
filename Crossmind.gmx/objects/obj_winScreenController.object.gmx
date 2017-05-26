@@ -54,7 +54,7 @@ instance_activate_object(obj_BackMainMenu);
           <argument>
             <kind>1</kind>
             <string>//draw_self();
-draw_set_font(font1);
+/*draw_set_font(font1);
 draw_text(room_width - obj_Score.x, obj_Score.y, global.score);
 </string>
           </argument>
