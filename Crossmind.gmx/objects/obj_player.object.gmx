@@ -42,7 +42,7 @@ BulletsTime = 0; //Increased bullet time
 BulletsCreated = 1; //NumberOfBulletsShot
 lazers = false;
 multishot = false;
-
+global.timeplayed = 0;
 
 </string>
           </argument>
@@ -124,11 +124,13 @@ MOVERIGHT = keyboard_check(ord(string(chr(moveRight))));
 MOVEUP = keyboard_check(ord(string(chr(moveUp))));
 MOVEDOWN = keyboard_check(ord(string(chr(moveDown))));
 btimer--;
+
 steps += 1;
 if steps &gt;= room_speed
 {
 steps = 0;
 score -=1;
+global.timeplayed +=1;
 minutes = score / 60;
 seconds = score % 60;
 ///Draw score in minutes and seconds

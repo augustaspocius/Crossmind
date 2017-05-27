@@ -94,6 +94,7 @@
     game_load("SavedGame");
 }
 else if(global.dead){
+    audio_stop_all();
     global.dead = false;
     room_goto(Main_Menu);
  
