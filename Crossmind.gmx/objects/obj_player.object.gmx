@@ -129,6 +129,10 @@ if steps &gt;= room_speed
 {
 steps = 0;
 score -=1;
+minutes = score / 60;
+seconds = score % 60;
+///Draw score in minutes and seconds
+//draw_text(825, 10, "Timer: " + minutes + ":" + seconds);
 }
 invincability--;
 if(score &lt;= 0)
@@ -584,6 +588,7 @@ if(btimer &lt; 0)
             if (lazers = true)
             {
                 bullet.image_blend = c_red;
+                
             }
             bullet.speed = 15 + BulletsSpeed;
             bullet.direction = 180 + ShotDirection;
@@ -718,7 +723,7 @@ ShotDirection = 0;
         <arguments>
           <argument>
             <kind>12</kind>
-            <font>-1</font>
+            <font>pixel_cowboy</font>
           </argument>
           <argument>
             <kind>4</kind>

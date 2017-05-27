@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>time = 2
+            if (obj_player.lazers = true)
+            {
+                obj_bullet_creations.image_blend = c_red;
+            }
 </string>
           </argument>
         </arguments>

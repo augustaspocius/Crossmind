@@ -29,7 +29,7 @@
 shot = audio_play_sound(snd_shot, 5, false);
 if(obj_player.multishot = true)
 {
-    audio_sound_pitch(shot, -1);
+    audio_sound_pitch(shot, -10);
 }
 </string>
           </argument>
