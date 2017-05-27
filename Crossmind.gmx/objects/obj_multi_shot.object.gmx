@@ -29,7 +29,7 @@
 multishot = true;
 obj_player.BulletsCreated ++;
 arg0 = ("Multi shooting");
-//script_execute(scr_message, arg0, x, y);
+script_execute(scr_message, arg0, x, y);
 instance_destroy();
 }
 </string>

@@ -29,7 +29,7 @@
 obj_player.lazers = true;
 obj_player.BulletsTime += 6;
 arg0 = ("Incr. Shooting range");
-//script_execute(scr_message, arg0, x, y);
+script_execute(scr_message, arg0, x, y);
 instance_destroy();
 }
 </string>

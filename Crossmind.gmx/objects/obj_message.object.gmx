@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -79,7 +79,7 @@ if(image_alpha == 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x,y+3,text);
+            <string>draw_text(obj_player.x-32,obj_player.y-42,text);
 </string>
           </argument>
         </arguments>

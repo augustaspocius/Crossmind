@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>activated = false;
 image_speed = 0;
+itemList = ds_list_create();
+itemList[| 0] = obj_longer_shots;
+itemList[| 1] = obj_faster_shots;
+itemList[| 2] = obj_multi_shot;
+itemList[| 3] = obj_lives;
 </string>
           </argument>
         </arguments>
@@ -78,7 +83,7 @@ if (floor(image_index)==0)
           <argument>
             <kind>1</kind>
             <string>if(activated = false){
-instance_create(target_x, target_y, target_r)
+instance_create(x,y,itemList[| irandom(ds_list_size(itemList) - 1)]);
 image_index = 1;
 activated = true;
 }

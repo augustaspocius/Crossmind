@@ -195,9 +195,7 @@
     <instance objName="obj_corner" x="672" y="192" name="inst_3FAE3EF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_corner" x="576" y="224" name="inst_E8BA36CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_corner" x="608" y="224" name="inst_91D19F80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_651D7403" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_corner" x="480" y="256" name="inst_C5E4BCE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_C285E564" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_wall" x="480" y="288" name="inst_C9974317" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_corner" x="512" y="352" name="inst_3D745634" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_wall" x="480" y="320" name="inst_9CAE7DB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -205,7 +203,6 @@
     <instance objName="obj_wall" x="960" y="448" name="inst_56B273D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_wall" x="960" y="480" name="inst_55A771F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_corner" x="960" y="512" name="inst_A631F5FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_E08A8D11" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_wall" x="512" y="224" name="inst_C346EFC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="544" y="224" name="inst_ECAE2691" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="544" name="inst_72C692FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
@@ -233,7 +230,6 @@
     <instance objName="obj_corner" x="224" y="384" name="inst_D8852EC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
     <instance objName="obj_corner" x="96" y="288" name="inst_487073B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_corner" x="128" y="416" name="inst_99FA7B74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_8B2B81A6" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="obj_wall" x="128" y="320" name="inst_94E97E41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_wall" x="128" y="352" name="inst_9A5FCF85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_wall" x="960" y="32" name="inst_9094CBC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>

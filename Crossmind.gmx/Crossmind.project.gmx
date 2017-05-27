@@ -215,6 +215,7 @@
       <object>objects\obj_faster_shots</object>
       <object>objects\obj_multi_shot</object>
       <object>objects\obj_message</object>
+      <object>objects\obj_lives</object>
     </objects>
     <objects name="controls">
       <object>objects\obj_chooseMoveDown</object>
