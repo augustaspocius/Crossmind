@@ -28,7 +28,7 @@
             <string>if(place_meeting(x, y, obj_player)){
 multishot = true;
 obj_player.BulletsCreated ++;
-arg0 = ("Multi shooting");
+arg0 = ("Increased shotgun spread");
 script_execute(scr_message, arg0, x, y);
 instance_destroy();
 }

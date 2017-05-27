@@ -43,6 +43,7 @@ BulletsCreated = 1; //NumberOfBulletsShot
 lazers = false;
 multishot = false;
 global.timeplayed = 0;
+bosskilled = 0;
 
 </string>
           </argument>

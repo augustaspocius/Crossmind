@@ -277,9 +277,13 @@ invincability = 20;
 
 if(life &lt;=0)
 {
+obj_player.bosskilled++;
 instance_destroy();
 audio_pause_sound(snd_footstep);
-room_goto(rm_winRoom);
+if(obj_player.bosskilled &gt;= 2)
+{
+    room_goto(rm_winRoom);
+}
 }
 
 </string>
@@ -326,9 +330,13 @@ invincability = 20;
 
 if(life &lt;=0)
 {
+obj_player.bosskilled++;
 instance_destroy();
 audio_pause_sound(snd_footstep);
-room_goto(rm_winRoom);
+if(obj_player.bosskilled &gt;= 2)
+{
+    room_goto(rm_winRoom);
+}
 }
 </string>
           </argument>

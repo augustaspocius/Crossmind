@@ -28,6 +28,7 @@
             <string>if(life &lt;= 0)
 {
 instance_destroy()
+obj_player.score += 3;
 }
 shooting --;
 if(shooting &lt;= 0)

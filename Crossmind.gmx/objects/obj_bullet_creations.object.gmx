@@ -278,7 +278,10 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>other.life  -= 40;
-score += 5;
+if(other.life &lt;= 0)
+{
+    obj_player.score += 5;
+}
 </string>
           </argument>
         </arguments>

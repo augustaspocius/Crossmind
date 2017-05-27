@@ -29,7 +29,7 @@
 shot = audio_play_sound(snd_shot, 5, false);
 if(obj_player.multishot = true)
 {
-    audio_sound_pitch(shot, -10);
+    audio_sound_pitch(shot, -0.5);
 }
 </string>
           </argument>
@@ -171,7 +171,6 @@ bullet4.direction = 270;
           <argument>
             <kind>1</kind>
             <string>other.life  -= 40;
-score += 5;
 </string>
           </argument>
         </arguments>
