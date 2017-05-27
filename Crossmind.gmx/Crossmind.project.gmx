@@ -119,6 +119,7 @@
   <fonts name="fonts">
     <font>fonts\font0</font>
     <font>fonts\font1</font>
+    <font>fonts\pixel_cowboy</font>
   </fonts>
   <objects name="objects">
     <objects name="Characters">
