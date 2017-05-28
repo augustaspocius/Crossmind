@@ -54,7 +54,7 @@ raktas = 1;
             <kind>1</kind>
             <string>if(raktas = 1){
 instance_create(128, 320, obj_key)
-obj_key.col = c_red;
+obj_key.col = c_fuchsia;
 raktas = 0;
 }
 </string>

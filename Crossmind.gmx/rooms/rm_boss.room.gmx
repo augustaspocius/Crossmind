@@ -151,6 +151,11 @@
     <instance objName="obj_trap_spawn_enemy" x="96" y="256" name="inst_FE3999B9" locked="0" code="target_x = 240;&#xA;target_y = 288;&#xA;target_r = obj_enemy;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_trap_spawn_enemy" x="576" y="416" name="inst_FE671C5F" locked="0" code="target_x = 300;&#xA;target_y = 288;&#xA;target_r = obj_enemy;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_trap_spawn_enemy" x="800" y="416" name="inst_DAB2513E" locked="0" code="target_x = 320;&#xA;target_y = 288;&#xA;target_r = obj_enemy;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key" x="480" y="480" name="inst_6889B07F" locked="0" code="col = c_maroon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="96" y="64" name="inst_C1D3FF8A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="928" y="64" name="inst_444202AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="96" y="480" name="inst_4C2DF6D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="928" y="480" name="inst_EAFD785C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
