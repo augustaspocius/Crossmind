@@ -95,7 +95,6 @@
     <instance objName="obj_enemy_stationary" x="896" y="64" name="inst_BFE0BE2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_stationary" x="512" y="128" name="inst_867668DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_checkpoint" x="352" y="448" name="inst_B51A0EB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_lock" x="448" y="512" name="inst_B10F73A9" locked="0" code="col = c_red;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_corner" x="0" y="32" name="inst_A145DD25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_wall" x="0" y="64" name="inst_4D44175E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_wall" x="0" y="96" name="inst_713934EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>

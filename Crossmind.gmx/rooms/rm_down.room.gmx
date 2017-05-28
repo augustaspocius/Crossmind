@@ -216,6 +216,8 @@
     <instance objName="obj_wall" x="864" y="544" name="inst_1171DD3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_wall" x="832" y="544" name="inst_016C0CFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_wall" x="800" y="544" name="inst_0AF05BBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_bonfire" x="160" y="352" name="inst_71031EBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonfire" x="864" y="352" name="inst_C6AD69B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
