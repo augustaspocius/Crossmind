@@ -53,6 +53,7 @@
       <sprite>sprites\spr_trap2</sprite>
       <sprite>sprites\spr_chest</sprite>
       <sprite>sprites\spr_bonfire</sprite>
+      <sprite>sprites\spr_logo</sprite>
     </sprites>
     <sprites name="UI sprites">
       <sprite>sprites\Back</sprite>
@@ -151,6 +152,7 @@
       <object>objects\obj_trap_spawn_boss</object>
       <object>objects\obj_chest</object>
       <object>objects\obj_bonfire</object>
+      <object>objects\obj_logo</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cont_doors</object>
@@ -227,7 +229,6 @@
   </objects>
   <rooms name="rooms">
     <rooms name="Intro">
-      <room>rooms\rm_intro</room>
       <room>rooms\rm_intro2</room>
     </rooms>
     <rooms name="Menu">
