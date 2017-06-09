@@ -159,8 +159,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> //global.restartBeginning = true;
-//game_load("newGame");
+            <string>//global.restartBeginning = true;
+game_load("newGame");
 ini_open("settings.ini");
 Up = ini_read_real("controls", "up", keyboard_check(ord("W")));
 Down = ini_read_real("controls", "down",  keyboard_check(ord("S")));
