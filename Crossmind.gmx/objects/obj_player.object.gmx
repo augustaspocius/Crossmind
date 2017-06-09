@@ -114,16 +114,16 @@ bosskilled = 0;
           <argument>
             <kind>1</kind>
             <string>ini_open("settings.ini");
-moveUp = ini_read_real("controls", "up", keyboard_check(ord("W")));
-moveDown = ini_read_real("controls", "down",  keyboard_check(ord("S")));
-moveLeft = ini_read_real("controls", "left",  keyboard_check(ord("A")));
-moveRight = ini_read_real("controls", "right",  keyboard_check(ord("D")));
+Up = ini_read_real("controls", "up", keyboard_check(ord("W")));
+Down = ini_read_real("controls", "down",  keyboard_check(ord("S")));
+Left = ini_read_real("controls", "left",  keyboard_check(ord("A")));
+Right = ini_read_real("controls", "right",  keyboard_check(ord("D")));
 ini_close();
 
-MOVELEFT = keyboard_check(ord(string(chr(moveLeft))));
-MOVERIGHT = keyboard_check(ord(string(chr(moveRight))));
-MOVEUP = keyboard_check(ord(string(chr(moveUp))));
-MOVEDOWN = keyboard_check(ord(string(chr(moveDown))));
+MOVELEFT = keyboard_check(ord(string(chr(Left))));
+MOVERIGHT = keyboard_check(ord(string(chr(Right))));
+MOVEUP = keyboard_check(ord(string(chr(Up))));
+MOVEDOWN = keyboard_check(ord(string(chr(Down))));
 btimer--;
 
 steps += 1;
