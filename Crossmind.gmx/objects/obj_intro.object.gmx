@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//write your messages in an array, starting at 0, like so
+            <string>if(file_exists("newGame"))
+file_delete("newGame");
+//write your messages in an array, starting at 0, like so
 message[0] = "Made with                      ";
 message[1] = "";
 
