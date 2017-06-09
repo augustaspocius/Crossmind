@@ -183,9 +183,7 @@ if(file_exists("GameScreen.png"))
 {
     file_delete("GameScreen.png");
 }
-if(file_exists("SavedGame")){
-file_delete("SavedGame");
-}
+
 </string>
           </argument>
         </arguments>

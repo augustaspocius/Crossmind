@@ -26,7 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>x = room_width/2;
-
+if!(file_exists("settings.ini"))
+{
+ini_open("settings.ini");
+   global.key_up = 87;
+   global.key_down = 83;
+   global.key_left = 65;
+   global.key_right = 68;
+   
+   ini_write_real("controls", "up", global.key_up);
+   ini_write_real("controls", "down", global.key_down);
+   ini_write_real("controls", "left", global.key_left);
+   ini_write_real("controls", "right", global.key_right);
+   ini_close();
+   }
 </string>
           </argument>
         </arguments>
@@ -147,10 +160,17 @@ else
           <argument>
             <kind>1</kind>
             <string> //global.restartBeginning = true;
-game_load("newGame");
+//game_load("newGame");
+ini_open("settings.ini");
+Up = ini_read_real("controls", "up", keyboard_check(ord("W")));
+Down = ini_read_real("controls", "down",  keyboard_check(ord("S")));
+Left = ini_read_real("controls", "left",  keyboard_check(ord("A")));
+Right = ini_read_real("controls", "right",  keyboard_check(ord("D")));
+ini_close();
 with(obj_Coursor){
 instance_destroy()
 }
+
 </string>
           </argument>
         </arguments>
